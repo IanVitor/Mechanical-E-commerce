@@ -1,3 +1,39 @@
-body{
-  background-color: red;
+
+main{
+  max-width: 400px;
+  margin: auto;
+  padding: 10px;
+}
+
+#login-form{
+  display: flex;
+  justify-content: center;
+  padding: 16px;
+}
+
+.input{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 12px;
+}
+
+#login-btn{
+  display: flex;
+  justify-content: center;
+  padding: 6px;
+}
+
+#login-btn button{
+  background-color: rgb(20, 20, 113);
+  border: none;
+  color: #fff;
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+  box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.475);
+}
+
+#login-btn button:hover{
+  transform: scale(1.03);
 }
