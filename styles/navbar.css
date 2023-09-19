@@ -1,0 +1,44 @@
+header{
+  width: 100%;
+  background-color: #373f48;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+}
+
+.logo-container img{
+  width: 50px;
+}
+
+.search-container{
+  padding: 10px;
+}
+
+.search-container input{
+  width: 200px;
+  height: 30px;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+.car-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+}
+
+.car-container img{
+  width: 30px;
+  padding: 3px;
+  cursor: pointer;
+  border: 1px solid rgb(53, 50, 50);
+}
