@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="../styles/navbar.css">
   <link rel="stylesheet" href="../global.css">
+  <link rel="stylesheet" href="../styles/cart-modal.css">
   <title>Dashboard</title>
 </head>
 <body>
@@ -24,9 +25,18 @@
     </div>
   </header>
 
+  <div id="myModal" class="cart-modal">
+    <div class="cart-modal-content">
+      <span class="cart-close">&times;</span>
+      <p>Some text in the Modal..</p>
+    </div>
+  </div>
+
   <a href="../Home/index.html">Home</a>
   <a href="../Pagamento/index.html">Pagamento</a>
   <a href="../Produto/index.html">Produto</a>
   <a href="../Login/index.html">Sair</a>
+
+  <script src="../scripts/modal.js"></script>
 </body>
 </html>

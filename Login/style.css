@@ -32,10 +32,18 @@ main{
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   padding: 16px;
   width: 50%;
   height: 100%;
   border-radius: 8px;
+}
+
+.title-container{
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 20px;
+  padding: 20px;
 }
 
 .input{
@@ -75,4 +83,42 @@ main{
 
 #login-btn button:hover{
   transform: scale(1.03);
+}
+
+#redirect-container{
+  padding: 12px;
+  font-size: 14px;
+  font-family: "Montserrat";
+}
+
+#redirect-border{
+  width: 100%;
+  height: 1px;
+  margin: 20px 0 4px;
+  background-color: rgba(0, 0, 0, 0.413);
+}
+
+#redirect-container p{
+  padding: 12px;
+}
+
+#redirect-container p a{
+  text-decoration: none;
+  color: #eb4d25ca;
+  transition: 0.3s;
+}
+
+#redirect-container p a:hover{
+  color: #0000ff;
+}
+
+@media screen and (max-width: 720px) {
+  
+  #login-form{
+    width: 100%;
+  }
+
+  #logo-container{
+    display: none;
+  }
 }
