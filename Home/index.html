@@ -13,23 +13,7 @@
 
 <body>
 
-  <header>
-    <div class="logo-container">
-      <a href="../Home/index.html">
-        <img
-          src="https://png.pngtree.com/png-vector/20230815/ourmid/pngtree-sticker-design-made-of-car-parts-clipart-vector-png-image_6908943.png"
-          alt="logo">
-      </a>
-    </div>
-    <div class="search-container">
-      <input type="text" placeholder="Procure algo">
-    </div>
-    <div class="car-container">
-      <button id="myBtn">
-        <img src="https://pngimg.com/d/shopping_cart_PNG4.png" alt="car">
-      </button>
-    </div>
-  </header>
+  <iframe id="navbar" src="../Components/navbar.html" frameborder="0"></iframe>
 
   <!--Modal-->
 
@@ -46,6 +30,47 @@
   <a href="../Pagamento/index.html">Pagamento</a>
   <a href="../Produto/index.html">Produto</a>
   <a href="../Login/index.html">Sair</a>
+
+  <main>
+    <section class="slide-products">
+      <div class="iten-card">
+        <div class="card-img">
+          <img src="../Assets/aditivo.png" alt="aditivo">
+        </div>
+        <div class="card-content">
+          <h2>Aditivo Black Prime A05</h2>
+          <p>R$ <span>16,99</span></p>
+          <div class="btn-buy">
+            <button>Comprar</button>
+          </div>
+        </div>
+      </div>
+      <div class="iten-card">
+        <div class="card-img">
+          <img src="../Assets/pneu275-65R18.png" alt="aditivo">
+        </div>
+        <div class="card-content">
+          <h2>Par de pneu 275/65R18</h2>
+          <p>R$ <span>256,99</span></p>
+          <div class="btn-buy">
+            <button>Comprar</button>
+          </div>
+        </div>
+      </div>
+      <div class="iten-card">
+        <div class="card-img">
+          <img src="../Assets/rodaAro26.png" alt="aditivo">
+        </div>
+        <div class="card-content">
+          <h2>Jogo de rodas aro 26</h2>
+          <p>R$ <span>469,99</span></p>
+          <div class="btn-buy">
+            <button>Comprar</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <script src="../scripts/modal.js"></script>
 

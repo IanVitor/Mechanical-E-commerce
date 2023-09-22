@@ -18,10 +18,11 @@ header{
 
 .search-container{
   padding: 10px;
+  width: 40%;
 }
 
 .search-container input{
-  width: 200px;
+  width: 100%;
   height: 30px;
   padding: 8px;
   border-radius: 8px;
@@ -34,6 +35,11 @@ header{
   align-items: center;
   justify-content: center;
   width: 80px;
+}
+
+.car-container button{
+  border: none;
+  background-color: transparent;
 }
 
 .car-container img{
