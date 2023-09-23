@@ -16,5 +16,21 @@
   <a href="../Home/index.html">Home</a>
   <a href="../Pagamento/index.html">Pagamento</a>
   <a href="../Login/index.html">Sair</a>
+
+  <p id="here">ian</p>
+  
+  <script>
+    window.onload = function () {
+        var url = document.location.href,
+            params = url.split('?')[1].split('&'),
+            data = {}, tmp;
+        for (var i = 0, l = params.length; i < l; i++) {
+             tmp = params[i].split('=');
+             data[tmp[0]] = tmp[1];
+        }
+        document.getElementById('here').innerHTML = data.name + data.price
+    }
+  </script> 
+
 </body>
 </html>
