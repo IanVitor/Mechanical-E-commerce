@@ -22,26 +22,77 @@
 
   <main>
 
-    <h3>Mais vendidos</h3>
+    <section class="products-container">
 
-    <section id="products-container">
+      <h3>Mais vendidos</h3>
 
-      <div class="wrapper">
-        <i id="left" class="fa-solid fa-angle-left"></i>
-        <ul class="carousel">
-          <button class="product-btn" onclick="redirectToProductPage('Aditivo-A05')">
-            <li class="card">
-              <div class="img"><img src="../Assets/aditivo.png" alt="img" draggable="false"></div>
-              <h2>Aditivo</h2>
-              <span>R$ 16,99</span>
-            </li>
-          </button>
-          
-        </ul>
-        <i id="right" class="fa-solid fa-angle-right"></i>
-      </div>
+      <div id="most-solds-container">
+
+        <div id="wrapper" class="wrapper">
+          <i id="left" class="fa-solid fa-angle-left"></i>
+          <ul class="mostSoldsCarousel carousel">
+            <button class="product-btn" onclick="redirectToProductPage('Aditivo-A05')">
+              <li class="card">
+                <div class="img"><img src="../Assets/aditivo.png" alt="img" draggable="false"></div>
+                <h2>Aditivo</h2>
+                <span>R$ 16,99</span>
+              </li>
+            </button>
+
+          </ul>
+          <i id="right" class="fa-solid fa-angle-right"></i>
+        </div>
 
     </section>
+
+    <section class="products-container">
+
+      <h3>Peças mecânicas</h3>
+
+      <div id="most-solds-container">
+
+        <div id="wrapper" class="mechanicalsWrapper">
+          <i id="mechanicalILeft" class="fa-solid fa-angle-left"></i>
+          <ul id="mechanicalsCarousel" class="carousel">
+            <button class="product-btn" onclick="redirectToProductPage('Aditivo-A05')">
+              <li id="mechanicalCard" class="card">
+                <div class="img"><img src="../Assets/aditivo.png" alt="img" draggable="false"></div>
+                <h2>Aditivo</h2>
+                <span>R$ 16,99</span>
+              </li>
+            </button>
+
+          </ul>
+          <i id="mechanicalIRight" class="fa-solid fa-angle-right"></i>
+        </div>
+
+    </section>
+
+    <section class="products-container">
+
+      <h3>Acessórios</h3>
+
+      <div id="most-solds-container">
+
+        <div id="wrapper" class="wrapper">
+          <i id="left" class="fa-solid fa-angle-left"></i>
+          <ul class="acessoriesCarousel carousel">
+            <button class="product-btn" onclick="redirectToProductPage('Aditivo-A05')">
+              <li class="card">
+                <div class="img"><img src="https://acdn.mitiendanube.com/stores/001/156/157/products/12187-lixeira-de-carro-meu-carro-minhas-regras-3d1-a1d06f89de91e3831e16643736835428-1024-1024.png" alt="img" draggable="false"></div>
+                <h2>Aditivo</h2>
+                <span>R$ 16,99</span>
+              </li>
+            </button>
+
+          </ul>
+          <i id="right" class="fa-solid fa-angle-right"></i>
+        </div>
+
+    </section>
+
+    </div>
+    
   </main>
 
   <a href="../Dashboard/index.html">Dashboard</a>
@@ -49,6 +100,9 @@
   <a href="../Login/index.html">Sair</a>
 
   <script src="home.js"></script>
+  <script src="mostSolds.js"></script>
+  <script src="mechanicals.js"></script>
+  <script src="acessories.js"></script>
 
 </body>
 

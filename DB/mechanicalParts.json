@@ -1,0 +1,34 @@
+{
+  "mechanicalParts": [
+    {
+      "name": "Pastilha de freio Hr-v dianteiro",
+      "price": "199,00",
+      "img": "../Assets/pastilhaHr-v.webp"
+    },
+    {
+      "name": "Reservatório de fluido Corsa 95/96",
+      "price": "61,29",
+      "img": "../Assets/reservatorio-corsa.png"
+    },
+    {
+      "name": "Turbina Auto Avionics A50-3P",
+      "price": "1.950,00",
+      "img": "../Assets/turbina.png"
+    },
+    {
+      "name": "Bomba Vacuo do motor - Onix 2020/2023",
+      "price": "675,99",
+      "img": "../Assets/bomba_vacuo_onix.png"
+    },
+    {
+      "name": "Flange da Bomba de Combustível Uno Mile 2010/2011",
+      "price": "34,20",
+      "img": "../Assets/flange-uno.png"
+    },
+    {
+      "name": "Filtro de Óleo Jetta 2.0",
+      "price": "84,33",
+      "img": "../Assets/filtro-oleo-jetta.png"
+    }
+  ]
+}

@@ -13,7 +13,7 @@ main{
   padding: 10px;
 }
 
-#products-container{
+#most-solds-container{
   display: flex;
   width: 90%;
   margin: auto;
@@ -28,11 +28,11 @@ main{
   background-color: transparent;
 }
 
-.wrapper {
+#wrapper {
   width: 80%;
   position: relative;
 }
-.wrapper i {
+#wrapper i {
   top: 50%;
   height: 30px;
   width: 30px;
@@ -47,16 +47,16 @@ main{
   transform: translateY(-50%);
   transition: transform 0.1s linear;
 }
-.wrapper i:active{
+#wrapper i:active{
   transform: translateY(-50%) scale(0.85);
 }
-.wrapper i:first-child{
+#wrapper i:first-child{
   left: -22px;
 }
-.wrapper i:last-child{
+#wrapper i:last-child{
   right: -22px;
 }
-.wrapper .carousel{
+#wrapper .carousel{
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: calc((100% / 3) - 10px);

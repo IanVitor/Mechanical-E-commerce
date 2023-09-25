@@ -1,113 +1,58 @@
 function redirectToProductPage(name, price, img) {
   url =
-    "http://127.0.0.1:5500/Trabalho-DFW2/Produto/index.html?name=" +
+    "../../Produto/index.html?name=" +
     encodeURIComponent(name) + "&price=" + encodeURIComponent(price) + "&img=" + encodeURIComponent(img);
 
   document.location.href = url;
 }
 
-// Slide functions
-
-const wrapper = document.querySelector(".wrapper");
-const carousel = document.querySelector(".carousel");
-const firstCardWidth = carousel.querySelector(".card").offsetWidth;
-const arrowBtns = document.querySelectorAll(".wrapper i");
-const carouselChildrens = [...carousel.children];
-
-let isDragging = false,
-  isAutoPlay = true,
-  startX,
-  startScrollLeft,
-  timeoutId;
-
-let cardPerView = Math.round(carousel.offsetWidth / firstCardWidth);
-
-carouselChildrens
-  .slice(-cardPerView)
-  .reverse()
-  .forEach((card) => {
-    carousel.insertAdjacentHTML("afterbegin", card.outerHTML);
-  });
-
-carouselChildrens.slice(0, cardPerView).forEach((card) => {
-  carousel.insertAdjacentHTML("beforeend", card.outerHTML);
-});
-
-carousel.classList.add("no-transition");
-carousel.scrollLeft = carousel.offsetWidth;
-carousel.classList.remove("no-transition");
-
-arrowBtns.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    carousel.scrollLeft += btn.id == "left" ? -firstCardWidth : firstCardWidth;
-  });
-});
-
-const dragStart = (e) => {
-  isDragging = true;
-  carousel.classList.add("dragging");
-  startX = e.pageX;
-  startScrollLeft = carousel.scrollLeft;
-};
-
-const dragging = (e) => {
-  if (!isDragging) return;
-  carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
-};
-
-const dragStop = () => {
-  isDragging = false;
-  carousel.classList.remove("dragging");
-};
-
-const infiniteScroll = () => {
-  if (carousel.scrollLeft === 0) {
-    carousel.classList.add("no-transition");
-    carousel.scrollLeft = carousel.scrollWidth - 2 * carousel.offsetWidth;
-    carousel.classList.remove("no-transition");
-  } else if (
-    Math.ceil(carousel.scrollLeft) ===
-    carousel.scrollWidth - carousel.offsetWidth
-  ) {
-    carousel.classList.add("no-transition");
-    carousel.scrollLeft = carousel.offsetWidth;
-    carousel.classList.remove("no-transition");
-  }
-
-  clearTimeout(timeoutId);
-  if (!wrapper.matches(":hover")) autoPlay();
-};
-
-const autoPlay = () => {
-  if (window.innerWidth < 800 || !isAutoPlay) return;
-  timeoutId = setTimeout(() => (carousel.scrollLeft += firstCardWidth), 2500);
-};
-autoPlay();
-
-carousel.addEventListener("mousedown", dragStart);
-carousel.addEventListener("mousemove", dragging);
-document.addEventListener("mouseup", dragStop);
-carousel.addEventListener("scroll", infiniteScroll);
-wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
-wrapper.addEventListener("mouseleave", autoPlay);
-
 // Load products
 
-async function getData() {
-  const resposta = await fetch('../DB/mostSolds.json');
+async function getData(url) {
+  const resposta = await fetch(url);
   const json = await resposta.json();
   console.log(json)
   return json;
 }
 
 const createElements= async () => {
-  const data = await getData();
-  var $container = document.querySelector(".carousel")
+  const mostSoldData = await getData('../DB/mostSolds.json');
+  const mechanicalsData = await getData('../DB/mechanicalParts.json');
+  const acessoriesData = await getData('../DB/acessories.json');
+  var $mostContainer = document.querySelector(".mostSoldsCarousel")
+  var $mecContainer = document.querySelector("#mechanicalsCarousel")
+  var $acessContainer = document.querySelector(".acessoriesCarousel")
 
-  $container.innerHTML=''
+  $mostContainer.innerHTML=''
 
-  data.mostSolds.map(function(e){
-    $container.innerHTML += 
+  mostSoldData.mostSolds.map(function(e){
+    $mostContainer.innerHTML += 
+    `
+    <button class="product-btn" onclick="redirectToProductPage('${e.name}',' ${e.price}', '${e.img}')">
+      <li class="card">
+        <div class="img"><img src="${e.img}" alt="img" draggable="false"></div>
+        <h2>${e.name}</h2>
+        <span>R$ ${e.price}</span>
+      </li>
+    </button>
+    `
+  });
+  // Mechanical Parts
+  mechanicalsData.mechanicalParts.map(function(e){
+    $mecContainer.innerHTML += 
+    `
+    <button class="product-btn" onclick="redirectToProductPage('${e.name}',' ${e.price}', '${e.img}')">
+      <li class="card">
+        <div class="img"><img src="${e.img}" alt="img" draggable="false"></div>
+        <h2>${e.name}</h2>
+        <span>R$ ${e.price}</span>
+      </li>
+    </button>
+    `
+  });
+  // Acessories
+  acessoriesData.acessories.map(function(e){
+    $acessContainer.innerHTML += 
     `
     <button class="product-btn" onclick="redirectToProductPage('${e.name}',' ${e.price}', '${e.img}')">
       <li class="card">
