@@ -19,9 +19,9 @@ const createElements= async () => {
   const mostSoldData = await getData('../DB/mostSolds.json');
   const mechanicalsData = await getData('../DB/mechanicalParts.json');
   const acessoriesData = await getData('../DB/acessories.json');
-  var $mostContainer = document.querySelector(".mostSoldsCarousel")
+  var $mostContainer = document.querySelector("#mostSoldsCarousel")
   var $mecContainer = document.querySelector("#mechanicalsCarousel")
-  var $acessContainer = document.querySelector(".acessoriesCarousel")
+  var $acessContainer = document.querySelector("#acessoriesCarousel")
 
   $mostContainer.innerHTML=''
 
@@ -65,4 +65,5 @@ const createElements= async () => {
   });
 }
 
+//
 window.onload(createElements())

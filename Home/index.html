@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="../styles/navbar.css">
   <link rel="stylesheet" href="../global.css">
   <link rel="stylesheet" href="../styles/cart-modal.css">
+  <link rel="stylesheet" href="search.css">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
     integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
@@ -18,51 +19,82 @@
 
 <body>
 
-  <iframe id="navbar" src="../Components/navbar.html" frameborder="0"></iframe>
+  <header>
+    <div class="logo-container">
+      <a href="../Home/index.html">
+        <img
+          src="https://png.pngtree.com/png-vector/20230815/ourmid/pngtree-sticker-design-made-of-car-parts-clipart-vector-png-image_6908943.png"
+          alt="logo">
+      </a>
+    </div>
+    <div class="search-container">
+      
+    </div>
+    <div class="car-container">
+      <button id="myBtn">
+        <img src="https://pngimg.com/d/shopping_cart_PNG4.png" alt="car">
+      </button>
+    </div>
+  </header>
+
+  <input type="search" id="search-input" placeholder="Pesquise aqui" value="" oninput="this.setAttribute('value', this.value)">
+
+  <div id="teste">
+
+    <div class="result" id="result0">
+      <p>Óleo para motor - 15W40</p>
+    </div>
+    <div class="result" id="result1">
+      <p>Jogo de rodas aro 26</p>
+    </div>
+    <div class="result" id="result2">
+      <p>Vela de ingnição NGK BP5HS Volkswagen</p>
+    </div>
+    <div class="result" id="result3">
+      <p>Shampoo Vonix V-ECO Pro</p>
+    </div>
+    <div class="result" id="result4">
+      <p>Aditivo A05 Black Prime</p>
+    </div>
+    <div class="result" id="result5">
+      <p>Par de pneus 275/65R18</p>
+    </div>
+  </div>
+    
+  <div id="myModal" class="modal">
+
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Some text in the Modal..</p>
+  </div>
+
+</div>
 
   <main>
 
     <section class="products-container">
 
-      <h3>Mais vendidos</h3>
+      <h3 class="sliderTitle">Mais vendidos</h3>
 
-      <div id="most-solds-container">
+      <div id="container">
 
         <div id="wrapper" class="wrapper">
-          <i id="left" class="fa-solid fa-angle-left"></i>
-          <ul class="mostSoldsCarousel carousel">
-            <button class="product-btn" onclick="redirectToProductPage('Aditivo-A05')">
-              <li class="card">
-                <div class="img"><img src="../Assets/aditivo.png" alt="img" draggable="false"></div>
-                <h2>Aditivo</h2>
-                <span>R$ 16,99</span>
-              </li>
-            </button>
-
-          </ul>
-          <i id="right" class="fa-solid fa-angle-right"></i>
+          <i id="MostIleft" class="fa-solid fa-angle-left"></i>
+          <ul id="mostSoldsCarousel" class="carousel"></ul>
+          <i id="MostIright" class="fa-solid fa-angle-right"></i>
         </div>
 
     </section>
 
     <section class="products-container">
 
-      <h3>Peças mecânicas</h3>
+      <h3 class="sliderTitle">Peças mecânicas</h3>
 
-      <div id="most-solds-container">
+      <div id="container">
 
         <div id="wrapper" class="mechanicalsWrapper">
           <i id="mechanicalILeft" class="fa-solid fa-angle-left"></i>
-          <ul id="mechanicalsCarousel" class="carousel">
-            <button class="product-btn" onclick="redirectToProductPage('Aditivo-A05')">
-              <li id="mechanicalCard" class="card">
-                <div class="img"><img src="../Assets/aditivo.png" alt="img" draggable="false"></div>
-                <h2>Aditivo</h2>
-                <span>R$ 16,99</span>
-              </li>
-            </button>
-
-          </ul>
+          <ul id="mechanicalsCarousel" class="carousel"></ul>
           <i id="mechanicalIRight" class="fa-solid fa-angle-right"></i>
         </div>
 
@@ -70,23 +102,14 @@
 
     <section class="products-container">
 
-      <h3>Acessórios</h3>
+      <h3 class="sliderTitle">Acessórios</h3>
 
-      <div id="most-solds-container">
+      <div id="container">
 
         <div id="wrapper" class="wrapper">
-          <i id="left" class="fa-solid fa-angle-left"></i>
-          <ul class="acessoriesCarousel carousel">
-            <button class="product-btn" onclick="redirectToProductPage('Aditivo-A05')">
-              <li class="card">
-                <div class="img"><img src="https://acdn.mitiendanube.com/stores/001/156/157/products/12187-lixeira-de-carro-meu-carro-minhas-regras-3d1-a1d06f89de91e3831e16643736835428-1024-1024.png" alt="img" draggable="false"></div>
-                <h2>Aditivo</h2>
-                <span>R$ 16,99</span>
-              </li>
-            </button>
-
-          </ul>
-          <i id="right" class="fa-solid fa-angle-right"></i>
+          <i id="AcessoriesILeft" class="fa-solid fa-angle-left"></i>
+          <ul id="acessoriesCarousel" class="carousel"></ul>
+          <i id="AcessoriesIRight" class="fa-solid fa-angle-right"></i>
         </div>
 
     </section>
@@ -100,9 +123,8 @@
   <a href="../Login/index.html">Sair</a>
 
   <script src="home.js"></script>
-  <script src="mostSolds.js"></script>
-  <script src="mechanicals.js"></script>
-  <script src="acessories.js"></script>
+  <script src="slider.js"></script>
+  <script src="../scripts/modal.js"></script>
 
 </body>
 

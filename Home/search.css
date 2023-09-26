@@ -1,0 +1,52 @@
+.result {
+  display: none;
+  border: 1px solid black;
+}
+
+#teste {
+  display: none;
+  width: 40%;
+  height: 150px;
+  background-color: #fff;
+  overflow-y: scroll;
+  position: fixed;
+  left: 50%;
+  top: 18%;
+  z-index: 100;
+  transform: translate(-50%, -50%);
+  margin: auto;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.411);
+}
+
+input[value="J" i]~#teste #result1,
+input[value="Jo" i]~#teste #result1,
+input[value="Jog" i]~#teste #result1,
+input[value="Jogo" i]~#teste #result1,
+input[value="Jogo " i]~#teste #result1,
+input[value="Jogo d" i]~#teste #result1,
+input[value="Jogo de" i]~#teste #result1,
+input[value="Jogo de " i]~#teste #result1,
+input[value="Jogo de r" i]~#teste #result1,
+input[value="Jogo de ro" i]~#teste #result1,
+input[value="Jogo de rod" i]~#teste #result1,
+input[value="Jogo de roda" i]~#teste #result1, 
+input[value="Jogo de rodas" i]~#teste #result1, 
+input[value="Jogo de rodas " i]~#teste #result1, 
+input[value="Jogo de rodas a" i]~#teste #result1,
+input[value="Jogo de rodas ar" i]~#teste #result1, 
+input[value="Jogo de rodas aro" i]~#teste #result1, 
+input[value="Jogo de rodas aro " i]~#teste #result1,
+input[value="Jogo de rodas aro 2" i]~#teste #result1, 
+input[value="Jogo de rodas aro 26" i]~#teste #result1{ 
+  display: block;
+}
+
+/*Jogo de rodas aro 26*/
+
+input[value="mar" i]~#teste #result1 {
+  display: block;
+}
+
+input[value="mat" i]~#teste #result2 {
+  display: block;
+}
