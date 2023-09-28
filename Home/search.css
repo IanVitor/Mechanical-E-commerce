@@ -1,52 +1,209 @@
-.result {
-  display: none;
+#search-input{
+  position: fixed;
+  z-index: 99;
+  width: 40%;
+  height: 30px;
+  padding: 6px;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  top: 4%;
   border: 1px solid black;
+  border-radius: 6px;
+  outline: #eb4b25;
 }
 
-#teste {
+/*
+373f48
+eb4b25
+*/
+
+.result {
+  display: none;
+  padding: 6px;
+  background-color: #f4f5fa;
+  border: 1px solid #e5e7f2;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#result-container {
   display: none;
   width: 40%;
   height: 150px;
-  background-color: #fff;
-  overflow-y: scroll;
+  padding: 4px;
+  border-radius: 6px;
+  background-color: #ffffff;
+  overflow-y: auto;
   position: fixed;
   left: 50%;
-  top: 18%;
+  top: 19%;
   z-index: 100;
   transform: translate(-50%, -50%);
   margin: auto;
   box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.411);
 }
 
-input[value="J" i]~#teste #result1,
-input[value="Jo" i]~#teste #result1,
-input[value="Jog" i]~#teste #result1,
-input[value="Jogo" i]~#teste #result1,
-input[value="Jogo " i]~#teste #result1,
-input[value="Jogo d" i]~#teste #result1,
-input[value="Jogo de" i]~#teste #result1,
-input[value="Jogo de " i]~#teste #result1,
-input[value="Jogo de r" i]~#teste #result1,
-input[value="Jogo de ro" i]~#teste #result1,
-input[value="Jogo de rod" i]~#teste #result1,
-input[value="Jogo de roda" i]~#teste #result1, 
-input[value="Jogo de rodas" i]~#teste #result1, 
-input[value="Jogo de rodas " i]~#teste #result1, 
-input[value="Jogo de rodas a" i]~#teste #result1,
-input[value="Jogo de rodas ar" i]~#teste #result1, 
-input[value="Jogo de rodas aro" i]~#teste #result1, 
-input[value="Jogo de rodas aro " i]~#teste #result1,
-input[value="Jogo de rodas aro 2" i]~#teste #result1, 
-input[value="Jogo de rodas aro 26" i]~#teste #result1{ 
+
+input[value="Ó" i]~#result-container #result0,
+input[value="Ól" i]~#result-container #result0,
+input[value="Óle" i]~#result-container #result0,
+input[value="Óleo" i]~#result-container #result0,
+input[value="Óleo " i]~#result-container #result0,
+input[value="Óleo p" i]~#result-container #result0,
+input[value="Óleo pa" i]~#result-container #result0,
+input[value="Óleo par" i]~#result-container #result0,
+input[value="Óleo para" i]~#result-container #result0,
+input[value="Óleo para " i]~#result-container #result0,
+input[value="Óleo para m" i]~#result-container #result0,
+input[value="Óleo para mo" i]~#result-container #result0,
+input[value="Óleo para mot" i]~#result-container #result0,
+input[value="Óleo para moto" i]~#result-container #result0,
+input[value="Óleo para motor" i]~#result-container #result0, 
+input[value="Óleo para motor " i]~#result-container #result0, 
+input[value="Óleo para motor -" i]~#result-container #result0, 
+input[value="Óleo para motor - " i]~#result-container #result0,
+input[value="Óleo para motor - 1" i]~#result-container #result0, 
+input[value="Óleo para motor - 15" i]~#result-container #result0, 
+input[value="Óleo para motor - 15W" i]~#result-container #result0,
+input[value="Óleo para motor - 15W4" i]~#result-container #result0, 
+input[value="Óleo para motor - 15W40" i]~#result-container #result0{ 
   display: block;
 }
 
-/*Jogo de rodas aro 26*/
-
-input[value="mar" i]~#teste #result1 {
+input[value="J" i]~#result-container #result1,
+input[value="Jo" i]~#result-container #result1,
+input[value="Jog" i]~#result-container #result1,
+input[value="Jogo" i]~#result-container #result1,
+input[value="Jogo " i]~#result-container #result1,
+input[value="Jogo d" i]~#result-container #result1,
+input[value="Jogo de" i]~#result-container #result1,
+input[value="Jogo de " i]~#result-container #result1,
+input[value="Jogo de r" i]~#result-container #result1,
+input[value="Jogo de ro" i]~#result-container #result1,
+input[value="Jogo de rod" i]~#result-container #result1,
+input[value="Jogo de roda" i]~#result-container #result1, 
+input[value="Jogo de rodas" i]~#result-container #result1, 
+input[value="Jogo de rodas " i]~#result-container #result1, 
+input[value="Jogo de rodas a" i]~#result-container #result1,
+input[value="Jogo de rodas ar" i]~#result-container #result1, 
+input[value="Jogo de rodas aro" i]~#result-container #result1, 
+input[value="Jogo de rodas aro " i]~#result-container #result1,
+input[value="Jogo de rodas aro 2" i]~#result-container #result1, 
+input[value="Jogo de rodas aro 26" i]~#result-container #result1{ 
   display: block;
 }
 
-input[value="mat" i]~#teste #result2 {
+input[value="V" i]~#result-container #result2,
+input[value="Ve" i]~#result-container #result2,
+input[value="Vel" i]~#result-container #result2,
+input[value="Vela" i]~#result-container #result2,
+input[value="Vela " i]~#result-container #result2,
+input[value="Vela d" i]~#result-container #result2,
+input[value="Vela de" i]~#result-container #result2,
+input[value="Vela de " i]~#result-container #result2,
+input[value="Vela de i" i]~#result-container #result2,
+input[value="Vela de ing" i]~#result-container #result2,
+input[value="Vela de ingn" i]~#result-container #result2,
+input[value="Vela de ingni" i]~#result-container #result2,
+input[value="Vela de ingniç" i]~#result-container #result2,
+input[value="Vela de ingniçã" i]~#result-container #result2,
+input[value="Vela de ingnição" i]~#result-container #result2,
+input[value="Vela de ingnição " i]~#result-container #result2,
+input[value="Vela de ingnição N" i]~#result-container #result2,
+input[value="Vela de ingnição NG" i]~#result-container #result2,
+input[value="Vela de ingnição NGK" i]~#result-container #result2,
+input[value="Vela de ingnição NGK " i]~#result-container #result2,
+input[value="Vela de ingnição NGK B" i]~#result-container #result2,
+input[value="Vela de ingnição NGK BP" i]~#result-container #result2,
+input[value="Vela de ingnição NGK BP5" i]~#result-container #result2,
+input[value="Vela de ingnição NGK BP5H" i]~#result-container #result2,
+input[value="Vela de ingnição NGK BP5HS" i]~#result-container #result2,
+input[value="Vela de ingnição NGK BP5HS " i]~#result-container #result2,
+input[value="Vela de ingnição NGK BP5HS V" i]~#result-container #result2, 
+input[value="Vela de ingnição NGK BP5HS Vo" i]~#result-container #result2, 
+input[value="Vela de ingnição NGK BP5HS Vol" i]~#result-container #result2, 
+input[value="Vela de ingnição NGK BP5HS Volk" i]~#result-container #result2,
+input[value="Vela de ingnição NGK BP5HS Volks" i]~#result-container #result2, 
+input[value="Vela de ingnição NGK BP5HS Volksw" i]~#result-container #result2, 
+input[value="Vela de ingnição NGK BP5HS Volkswa" i]~#result-container #result2,
+input[value="Vela de ingnição NGK BP5HS Volkswag" i]~#result-container #result2, 
+input[value="Vela de ingnição NGK BP5HS Volkswage" i]~#result-container #result2{ 
+  display: block;
+}
+
+input[value="S" i]~#result-container #result3,
+input[value="Sh" i]~#result-container #result3,
+input[value="Sha" i]~#result-container #result3,
+input[value="Sham" i]~#result-container #result3,
+input[value="Shamp" i]~#result-container #result3,
+input[value="Shampo" i]~#result-container #result3,
+input[value="Shampoo" i]~#result-container #result3,
+input[value="Shampoo " i]~#result-container #result3,
+input[value="Shampoo V" i]~#result-container #result3,
+input[value="Shampoo Vo" i]~#result-container #result3,
+input[value="Shampoo Von" i]~#result-container #result3,
+input[value="Shampoo Voni" i]~#result-container #result3,
+input[value="Shampoo Vonix" i]~#result-container #result3,
+input[value="Shampoo Vonix " i]~#result-container #result3,
+input[value="Shampoo Vonix V" i]~#result-container #result3, 
+input[value="Shampoo Vonix V-" i]~#result-container #result3, 
+input[value="Shampoo Vonix V-E" i]~#result-container #result3, 
+input[value="Shampoo Vonix V-EC" i]~#result-container #result3,
+input[value="Shampoo Vonix V-ECO" i]~#result-container #result3, 
+input[value="Shampoo Vonix V-ECO " i]~#result-container #result3, 
+input[value="Shampoo Vonix V-ECO P" i]~#result-container #result3,
+input[value="Shampoo Vonix V-ECO Pr" i]~#result-container #result3, 
+input[value="Shampoo Vonix V-ECO Pro" i]~#result-container #result3{ 
+  display: block;
+}
+
+input[value="A" i]~#result-container #result4,
+input[value="Ad" i]~#result-container #result4,
+input[value="Adi" i]~#result-container #result4,
+input[value="Adit" i]~#result-container #result4,
+input[value="Aditi" i]~#result-container #result4,
+input[value="Aditiv" i]~#result-container #result4,
+input[value="Aditivo" i]~#result-container #result4,
+input[value="Aditivo " i]~#result-container #result4,
+input[value="Aditivo A" i]~#result-container #result4,
+input[value="Aditivo A0" i]~#result-container #result4,
+input[value="Aditivo A05" i]~#result-container #result4,
+input[value="Aditivo A05 " i]~#result-container #result4,
+input[value="Aditivo A05 B" i]~#result-container #result4,
+input[value="Aditivo A05 Bl" i]~#result-container #result4,
+input[value="Aditivo A05 Bla" i]~#result-container #result4, 
+input[value="Aditivo A05 Blac" i]~#result-container #result4, 
+input[value="Aditivo A05 Black" i]~#result-container #result4, 
+input[value="Aditivo A05 Black " i]~#result-container #result4,
+input[value="Aditivo A05 Black P" i]~#result-container #result4, 
+input[value="Aditivo A05 Black Pr" i]~#result-container #result4, 
+input[value="Aditivo A05 Black Pri" i]~#result-container #result4,
+input[value="Aditivo A05 Black Prim" i]~#result-container #result4, 
+input[value="Aditivo A05 Black Prime" i]~#result-container #result4{ 
+  display: block;
+}
+
+input[value="P" i]~#result-container #result5,
+input[value="Pa" i]~#result-container #result5,
+input[value="Par" i]~#result-container #result5,
+input[value="Par " i]~#result-container #result5,
+input[value="Par d" i]~#result-container #result5,
+input[value="Par de" i]~#result-container #result5,
+input[value="Par de " i]~#result-container #result5,
+input[value="Par de p" i]~#result-container #result5,
+input[value="Par de pn" i]~#result-container #result5,
+input[value="Par de pne" i]~#result-container #result5,
+input[value="Par de pneu" i]~#result-container #result5,
+input[value="Par de pneus" i]~#result-container #result5,
+input[value="Par de pneus " i]~#result-container #result5,
+input[value="Par de pneus 2" i]~#result-container #result5, 
+input[value="Par de pneus 27" i]~#result-container #result5, 
+input[value="Par de pneus 275" i]~#result-container #result5, 
+input[value="Par de pneus 275/" i]~#result-container #result5,
+input[value="Par de pneus 275/6" i]~#result-container #result5, 
+input[value="Par de pneus 275/65" i]~#result-container #result5, 
+input[value="Par de pneus 275/65R" i]~#result-container #result5,
+input[value="Par de pneus 275/65R1" i]~#result-container #result5, 
+input[value="Par de pneus 275/65R18" i]~#result-container #result5{ 
   display: block;
 }

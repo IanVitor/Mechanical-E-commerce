@@ -33,7 +33,7 @@
 
   <div class="modal-content">
     <span class="close">&times;</span>
-    <p>Some text in the Modal..</p>
+    <p>Seu carrinho está vazio</p>
   </div>
   
   </div>
@@ -43,7 +43,9 @@
   <a href="../Pagamento/index.html">Pagamento</a>
   <a href="../Login/index.html">Sair</a>
 
-  <p id="here">ian</p>
+  <img id="image">
+  <h1 id="name"></h1>
+  <p id="valor"></p>
   
   <script>
     window.onload = function () {
@@ -54,7 +56,12 @@
              tmp = params[i].split('=');
              data[tmp[0]] = tmp[1];
         }
-        document.getElementById('here').innerHTML = data.name + data.price
+
+
+        
+        document.getElementById('image').src = decodeURI(data.img)
+        document.getElementById('name').innerText = decodeURI(data.name)
+        document.getElementById('valor').innerText = "R$" + decodeURIComponent(data.price)
     }
   </script> 
 

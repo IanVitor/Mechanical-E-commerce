@@ -39,10 +39,12 @@
 
   <input type="search" id="search-input" placeholder="Pesquise aqui" value="" oninput="this.setAttribute('value', this.value)">
 
-  <div id="teste">
+  <div id="result-container">
 
     <div class="result" id="result0">
-      <p>Óleo para motor - 15W40</p>
+      <button class="product-btn" onclick="redirectToProductPage('Óleo para motor - 15W40','27,83', '${e.img}')">
+        <p>Óleo para motor - 15W40</p>
+      </button>
     </div>
     <div class="result" id="result1">
       <p>Jogo de rodas aro 26</p>
@@ -65,7 +67,8 @@
 
   <div class="modal-content">
     <span class="close">&times;</span>
-    <p>Some text in the Modal..</p>
+    <p>Seu carrinho está vazio</p>
+    <button>Comprar agora</button>
   </div>
 
 </div>

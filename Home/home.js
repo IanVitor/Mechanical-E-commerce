@@ -1,7 +1,7 @@
 function redirectToProductPage(name, price, img) {
   url =
     "../../Produto/index.html?name=" +
-    encodeURIComponent(name) + "&price=" + encodeURIComponent(price) + "&img=" + encodeURIComponent(img);
+    encodeURIComponent(name) + "&price=" + encodeURI(price) + "&img=" + encodeURIComponent(img);
 
   document.location.href = url;
 }
@@ -63,6 +63,25 @@ const createElements= async () => {
     </button>
     `
   });
+}
+// Search Input
+
+var result = document.getElementById('result-container')
+var searchInput = document.getElementById('search-input')
+
+searchInput.addEventListener("keyup", (event) =>{
+  console.log(searchInput.value)
+  if(event.target.value == "")
+  {
+    result.style.display = "none"
+  }
+  else{
+    result.style.display = "block"
+  }
+})
+
+window.onclick = function(){
+  result.style.display = "none"
 }
 
 //
