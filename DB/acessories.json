@@ -2,17 +2,17 @@
   "acessories": [
     {
       "name": "Suporte de Celular - Ar Condicionado",
-      "price": "18,90",
+      "price": "18.90",
       "img": "../Assets/suporte-celular.png"
     },
     {
       "name": "Perfume Aromatizante Pump - 30ml",
-      "price": "4,99",
+      "price": "4.99",
       "img": "../Assets/aromatizante.png"
     },
     {
       "name": "Lixeira de Carro - 1L",
-      "price": "34,99",
+      "price": "34.99",
       "img": "../Assets/lixeira.png"
     }
   ]

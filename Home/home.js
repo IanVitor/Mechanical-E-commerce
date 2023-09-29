@@ -1,7 +1,7 @@
 function redirectToProductPage(name, price, img) {
   url =
     "../../Produto/index.html?name=" +
-    encodeURIComponent(name) + "&price=" + encodeURI(price) + "&img=" + encodeURIComponent(img);
+    encodeURI(name) + "&price=" + encodeURI(price) + "&img=" + encodeURIComponent(img);
 
   document.location.href = url;
 }
@@ -11,7 +11,6 @@ function redirectToProductPage(name, price, img) {
 async function getData(url) {
   const resposta = await fetch(url);
   const json = await resposta.json();
-  console.log(json)
   return json;
 }
 

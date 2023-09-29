@@ -1,3 +1,210 @@
-img{
-  width: 200px;
+body{
+  background-color: rgb(0, 0, 0, .1);
+}
+
+main{
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #ffffff;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.21);
+}
+
+#img-container{
+  width: 60%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#img-container img{
+  width: 100%;
+  max-width: 350px;
+  transition: 0.3s all ease-in-out;
+}
+
+#img-container img:hover{
+  transform: scale(1.5);
+}
+
+#product-container{
+  border: 1px solid rgb(0, 0, 0, .1);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.185);
+  border-radius: 8px;
+  padding: 10px;
+  width: 40%;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+#product-name{
+  font-size: 20px;
+  color: #666666;
+  padding: 0 6px;
+}
+
+#product-price{
+  font-size: 16px;
+  padding: 6px;
+  line-height: 10px;
+}
+
+#price-installments{
+  font-size: 12px;
+  padding: 0 6px;
+}
+
+#buy-btn{
+  width: 150px;
+  height: 30px;
+  background-color: #eb4b25;
+  color: rgba(255, 255, 255, 0.8);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  margin: 90% auto 0;
+  transition: 0.3s all ease-in-out;
+  cursor: pointer;
+}
+
+#buy-btn:hover{
+  transform: scale(1.01);
+}
+
+/* Slider */
+
+#container{
+  display: flex;
+  width: 90%;
+  margin: 0 auto 20px;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid rgb(0, 0, 0, .3);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.21);
+  background-color: #fff;
+}
+
+.product-btn{
+  border: none;
+  background-color: transparent;
+}
+
+.sliderTitle{
+  width: 90%;
+  margin: auto;
+  padding: 30px 0 10px;
+  font-size: 20px;
+}
+
+#wrapper {
+  width: 80%;
+  position: relative;
+}
+#wrapper i {
+  top: 50%;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  position: absolute;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #666666;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.438);
+  border-radius: 8px;
+  padding-top: 5px;
+  background-color: #fff;
+  text-align: center;
+  transform: translateY(-50%);
+  transition: transform 0.1s linear;
+}
+#wrapper i:active{
+  transform: translateY(-50%) scale(0.85);
+}
+#wrapper i:first-child{
+  left: -12%;
+}
+#wrapper i:last-child{
+  right: -12%;
+}
+#wrapper .carousel{
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 3) - 10px);
+  overflow: hidden;
+  scroll-behavior: smooth;
+
+}
+.carousel.dragging .card {
+  cursor: grab;
+  user-select: none;
+}
+.carousel :where(.card, .img) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel .card {
+  scroll-snap-align: start;
+  height: 250px;
+  max-width: 200px;
+  list-style: none;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 8px;
+  flex-direction: column;
+}
+
+.carousel .card:hover{
+  transform: scale(1.01);
+}
+
+.carousel .card .img {
+  background: #8B53FF;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+.card .img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: contain;
+}
+.carousel .card h2 {
+  font-weight: 500;
+  font-size: 16px;
+  margin: 30px 0 5px;
+}
+.carousel .card span {
+  color: #0F1111;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.carousel .card p{
+  font-size: 12px;
+  font-weight: bold;
+  padding: 3px;
+}
+
+#value{
+  color: black;
+}
+
+@media screen and (max-width: 900px) {
+  .wrapper .carousel {
+    grid-auto-columns: calc((100% / 3) - 9px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper .carousel {
+    grid-auto-columns: 70%;
+    gap: 50px;
+  }
 }

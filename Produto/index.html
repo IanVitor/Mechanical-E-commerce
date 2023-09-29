@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,10 @@
   <link rel="stylesheet" href="../styles/navbar.css">
   <link rel="stylesheet" href="../global.css">
   <link rel="stylesheet" href="../styles/cart-modal.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>Produto</title>
 </head>
+
 <body>
 
   <header>
@@ -31,41 +34,45 @@
 
   <div id="myModal" class="modal">
 
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <p>Seu carrinho está vazio</p>
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>Seu carrinho está vazio</p>
+    </div>
   </div>
-  
-  </div>
 
-  <a href="../Dashboard/index.html">Dashboard</a>
-  <a href="../Home/index.html">Home</a>
-  <a href="../Pagamento/index.html">Pagamento</a>
-  <a href="../Login/index.html">Sair</a>
+  <main>
 
-  <img id="image">
-  <h1 id="name"></h1>
-  <p id="valor"></p>
-  
-  <script>
-    window.onload = function () {
-        var url = document.location.href,
-            params = url.split('?')[1].split('&'),
-            data = {}, tmp;
-        for (var i = 0, l = params.length; i < l; i++) {
-             tmp = params[i].split('=');
-             data[tmp[0]] = tmp[1];
-        }
+    <section id="img-container">
+      <img id="product-image">
+    </section>
 
+    <section id="product-container">
+      <h1 id="product-name"></h1>
+      <p id="product-price">R$ <span id="product-price-span"></span></p>
+      <p id="price-installments">em <span id="installments"></span>x de R$ <span id="value">12,8</span></p>
+      <button id="buy-btn">Comprar</button>
+    </section>
 
-        
-        document.getElementById('image').src = decodeURI(data.img)
-        document.getElementById('name').innerText = decodeURI(data.name)
-        document.getElementById('valor').innerText = "R$" + decodeURIComponent(data.price)
-    }
-  </script> 
+  </main>
 
+  <section class="products-container">
+
+    <h3 class="sliderTitle">Mais produtos</h3>
+
+    <div id="container">
+
+      <div id="wrapper" class="wrapper">
+        <i id="MoreIleft" class="fa-solid fa-angle-left"></i>
+        <ul id="moreProductsCarousel" class="carousel">
+        </ul>
+        <i id="MoreIright" class="fa-solid fa-angle-right"></i>
+      </div>
+
+  </section>
+
+  <script src="produto.js"></script>
   <script src="../scripts/modal.js"></script>
 
 </body>
+
 </html>
