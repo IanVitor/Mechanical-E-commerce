@@ -2,13 +2,13 @@ const btnMostLeft = document.querySelector('#MostIleft')
 const btnMostRight = document.querySelector('#MostIright')
 
 btnMostLeft.addEventListener("click", () =>{
-  const width = document.querySelector('.product-btn').offsetWidth;
+  var width = document.getElementById('mostSoldsCarousel').offsetWidth / 5;
   document.getElementById('mostSoldsCarousel').scrollLeft -= width;
 })
 
 btnMostRight.addEventListener("click", () =>{
-  const width = document.querySelector('.product-btn').offsetWidth;
-  document.getElementById('mostSoldsCarousel').scrollLeft += width;
+  var width = document.getElementById('mostSoldsCarousel').offsetWidth / 5;
+  document.getElementById('mostSoldsCarousel').scrollLeft += width
 })
 
 // Mechanicals Slider
@@ -17,12 +17,12 @@ const btnMecLeft = document.querySelector('#mechanicalILeft')
 const btnMecRight = document.querySelector('#mechanicalIRight')
 
 btnMecLeft.addEventListener("click", () =>{
-  const width = document.querySelector('.product-btn').offsetWidth;
+  var width = document.getElementById('mechanicalsCarousel').offsetWidth / 5;
   document.getElementById('mechanicalsCarousel').scrollLeft -= width;
 })
 
 btnMecRight.addEventListener("click", () =>{
-  const width = document.querySelector('.product-btn').offsetWidth;
+  var width = document.getElementById('mechanicalsCarousel').offsetWidth / 5;
   document.getElementById('mechanicalsCarousel').scrollLeft += width;
 })
 
@@ -32,11 +32,11 @@ const btnAcessLeft = document.querySelector('#AcessoriesILeft')
 const btnAcessRight = document.querySelector('#AcessoriesIRight')
 
 btnAcessLeft.addEventListener("click", () =>{
-  const width = document.querySelector('.product-btn').offsetWidth;
+  var width = document.getElementById('acessoriesCarousel').offsetWidth / 5;
   document.getElementById('acessoriesCarousel').scrollLeft -= width;
 })
 
 btnAcessRight.addEventListener("click", () =>{
-  const width = document.querySelector('.product-btn').offsetWidth;
+  var width = document.getElementById('acessoriesCarousel').offsetWidth / 5;
   document.getElementById('acessoriesCarousel').scrollLeft += width;
 })

@@ -83,5 +83,6 @@ window.onclick = function(){
   result.style.display = "none"
 }
 
-//
-window.onload(createElements())
+window.addEventListener("load", () =>{
+  createElements()
+})

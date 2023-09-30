@@ -12,11 +12,6 @@
   outline: #eb4b25;
 }
 
-/*
-373f48
-eb4b25
-*/
-
 .result {
   display: none;
   padding: 6px;
@@ -42,7 +37,6 @@ eb4b25
   margin: auto;
   box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.411);
 }
-
 
 input[value="Ó" i]~#result-container #result0,
 input[value="Ól" i]~#result-container #result0,

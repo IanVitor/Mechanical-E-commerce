@@ -28,7 +28,7 @@
       </a>
     </div>
     <div class="search-container">
-      
+
     </div>
     <div class="car-container">
       <button id="myBtn">
@@ -37,7 +37,8 @@
     </div>
   </header>
 
-  <input type="search" id="search-input" placeholder="Pesquise aqui" value="" oninput="this.setAttribute('value', this.value)">
+  <input type="search" id="search-input" placeholder="Pesquise aqui" value=""
+    oninput="this.setAttribute('value', this.value)">
 
   <div id="result-container">
 
@@ -62,16 +63,43 @@
       <p>Par de pneus 275/65R18</p>
     </div>
   </div>
-    
+
   <div id="myModal" class="modal">
 
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <p>Seu carrinho está vazio</p>
-    <button>Comprar agora</button>
-  </div>
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="cart-container">
+        <section id="cart-itens">
+          <ul id="items-list">
+            
+          </ul>
+        </section>
+        <section id="total-container">
+          <div id="summary-container">
+            <h2 id="summary">Resumo do pedido</h2>
+            <div class="products-total">
+              <p id="products">produto(s)</p>
+              <span id="products-value">R$ </span>
+            </div>
+            <div class="shipping-container">
+              <p id="shipping">frete</p>
+              <span id="shipping-value">R$ 13,80</span>
+            </div>
+          </div>
+          <div class="summary-total">
+            <h3 id="total">Total</h3>
+            <p id="summary-value">R$ 286,99</p>
+          </div>
+          <div class="summary-btn-container">
+            <a href="../Pagamento/index.html">
+              <button id="summary-btn">Continuar</button>
+            </a>
+          </div>
+        </section>
+      </div>
+    </div>
 
-</div>
+  </div>
 
   <main>
 
@@ -118,7 +146,7 @@
     </section>
 
     </div>
-    
+
   </main>
 
   <a href="../Dashboard/index.html">Dashboard</a>
@@ -126,8 +154,9 @@
   <a href="../Login/index.html">Sair</a>
 
   <script src="home.js"></script>
-  <script src="slider.js"></script>
   <script src="../scripts/modal.js"></script>
+  <script src="slider.js"></script>
+  <script src="../scripts/cart.js"></script>
 
 </body>
 
