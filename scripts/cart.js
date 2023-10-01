@@ -29,8 +29,10 @@ function loadCartItems() {
 function getRandomId(){
   let id = Math.random(20)
 
-  return 1
+  console.log(id)
 }
+
+getRandomId()
 
 function saveOnLocalStorage(img, name, price, qtd) {
 
