@@ -8,15 +8,15 @@ window.onload = produto = async () => {
     data[tmp[0]] = tmp[1];
   }
 
-  const image = document.getElementById("product-image")
-  const name = document.getElementById("product-name")
-  const price = document.getElementById("product-price-span")
+  const image = document.getElementById("product-image");
+  const name = document.getElementById("product-name");
+  const price = document.getElementById("product-price-span");
 
   image.src = decodeURIComponent(data.img);
   name.innerText = decodeURI(data.name);
   price.innerText = decodeURIComponent(data.price);
 
-  calcInstallments(price.textContent.replace(",","."));
+  calcInstallments(price.textContent.replace(",", "."));
 
   // Slider
 
@@ -31,7 +31,7 @@ window.onload = produto = async () => {
         <li class="card">
           <div class="img"><img src="${e.img}" alt="img" draggable="false"></div>
           <h2>${e.name}</h2>
-          <span>R$ ${price}</span>
+          <span>R$ ${e.price}</span>
         </li>
       </button>
       `;
@@ -39,7 +39,7 @@ window.onload = produto = async () => {
 };
 
 var cart = [];
-const buyBtn = document.querySelector('#buy-btn')
+const buyBtn = document.querySelector("#buy-btn");
 
 async function getData(url) {
   const resposta = await fetch(url);
@@ -67,34 +67,34 @@ function calcInstallments(price) {
 
   if (price < 20) {
     installments.textContent = "2";
-    value.textContent = (price / 2).toFixed(2).replace(".",",");
-    console.log('foi')
-  } else if(price < 100){
+    value.textContent = (price / 2).toFixed(2).replace(".", ",");
+    console.log("foi");
+  } else if (price < 100) {
     installments.textContent = "4";
-    value.innerText = (price / 4).toFixed(2).replace(".",",");
-  }
-  else{
+    value.innerText = (price / 4).toFixed(2).replace(".", ",");
+  } else {
     installments.textContent = "10";
-    value.innerText = (price / 10).toFixed(2).replace(".",",");
+    value.innerText = (price / 10).toFixed(2).replace(".", ",");
   }
 }
 
 function redirectToProductPage(name, price, img) {
   url =
     "../../Produto/index.html?name=" +
-    encodeURI(name) + "&price=" + encodeURI(price) + "&img=" + encodeURIComponent(img);
+    encodeURI(name) +
+    "&price=" +
+    encodeURI(price) +
+    "&img=" +
+    encodeURIComponent(img);
 
   document.location.href = url;
 }
 
-function addToCart(img, name, price){
-
-  saveOnLocalStorage(img, name, price, "1")
-
+function addToCart(img, name, price) {
+  saveOnLocalStorage(img, name, price, "1");
 }
 
 function saveOnLocalStorage(img, name, price, qtd) {
-
   cart = getStorageData();
 
   let item = {
@@ -117,9 +117,9 @@ function getStorageData() {
 }
 
 buyBtn.addEventListener("click", () => {
-  let image = document.getElementById("product-image")
-  let name = document.getElementById("product-name")
-  let price = document.getElementById("product-price-span")
+  let image = document.getElementById("product-image");
+  let name = document.getElementById("product-name");
+  let price = document.getElementById("product-price-span");
 
-  addToCart(image.src, name.textContent, price.textContent)
-})
+  addToCart(image.src, name.textContent, price.textContent);
+});

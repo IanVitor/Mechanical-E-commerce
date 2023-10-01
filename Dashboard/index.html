@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="../styles/navbar.css">
-  <link rel="stylesheet" href="../global.css">
-  <link rel="stylesheet" href="../styles/cart-modal.css">
-  <title>Dashboard</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Peças de Alta Qualidade para uma Ampla Variedade de Modelos de Carros. Compre Agora!
+    ">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="../styles/navbar.css">
+    <link rel="stylesheet" href="../global.css">
+
+    <title>Bororo Mecanica</title>
 </head>
 <body>
-
   <header>
     <div class="logo-container">
       <a href="../Home/index.html">
@@ -19,28 +20,34 @@
           alt="logo">
       </a>
     </div>
-    <div class="search-container">
-      <input type="text" placeholder="Procure algo">
-    </div>
-    <div class="car-container">
-      <button id="myBtn">
-        <img src="https://pngimg.com/d/shopping_cart_PNG4.png" alt="car">
-      </button>
+    <div class="links">
+      <a href="../Login/index.html">Login</a>
+      <a href="../Cadastro/index.html">Cadastro</a>
     </div>
   </header>
 
-  <div id="myModal" class="cart-modal">
-    <div class="cart-modal-content">
-      <span class="cart-close">&times;</span>
-      <p>Se carrinho está vazio</p>
-    </div>
-  </div>
+    <main class="conteudo">
+        <section class="conteudo-principal">
+            <div class="conteudo-principal-escrito">
+                <h1 class="conteudo-principal-escrito-titulo">BuscoPeças</h1> 
+                <h2 class="conteudo-principal-escrito-subtitulo">Faça seu pedido, peças originais</h2>
+                <a id ="content-btn" href="../Home/index.html"><button>Ir para loja</button></a>
+            </div>
+                <img class="conteudo-principal-imagem" src="autopecas.jpg" alt="Foto da Loja Bororo Mecanica">
+        </section>
 
-  <a href="../Home/index.html">Home</a>
-  <a href="../Pagamento/index.html">Pagamento</a>
-  <a href="../Produto/index.html">Produto</a>
-  <a href="../Login/index.html">Sair</a>
+        <section class="conteudo-secundario">
+            <h3 class="conteudo-secundario-titulo">Uma variedade de Peças</h3>
+            <p class="conteudo-secundario-paragrafo">Peças para todos os tipos de veículos, além de diversas marcas.</p>
+            <h3 class="conteudo-secundario-titulo2">Agilidade no atendimento
+            </h3>
+            <p class="conteudo-secundario-paragrafo">Sempre buscamos solucionar os problemas de nossos clientes da forma mais rápida possível, um pós-venda sem complicação.</p>
+        </section>
+    </main>
 
-  <script src="../scripts/modal.js"></script>
+    <footer class="rodape">
+        <h4 class="rodape-titulo">CONTATO</h4>
+        <p class="rodape-texto">Av. Odila Azalim, 575 - Vila Nova Jundiainopolis, Jundiaí - SP, 13210-795 (11) 4002-8922</p>
+    </footer>
 </body>
 </html>
