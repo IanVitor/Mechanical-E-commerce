@@ -38,16 +38,51 @@ header{
   align-items: center;
   justify-content: center;
   width: 80px;
+  gap: 8px;
 }
 
 .car-container button{
   border: none;
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
   background-color: transparent;
 }
 
-.car-container img{
-  width: 30px;
-  padding: 3px;
+.car-container button:hover{
+  background-color: #444;
+}
+
+.car-container i{
+  padding: 4px;
+  font-size: 16px;
+  border-radius: 4px;
   cursor: pointer;
-  border: 1px solid rgb(53, 50, 50);
+  color: #fff;
+  border: 1px solid rgb(0, 0, 0, .2);
+}
+
+#user-btn{
+  position: relative;
+}
+
+#user-modal{
+  display: none;
+  position: absolute;
+  background-color: #373f48;
+  width: 100px;
+  height: 30px;
+  right: 0px;
+  top: 36px;
+  padding: 6px;
+  border-radius: 6px;
+}
+
+#user-modal a{
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s all;
+}
+
+#user-modal a:hover{
+  transform: scale(1.05);
 }

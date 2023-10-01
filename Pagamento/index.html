@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="../styles/navbar.css">
   <link rel="stylesheet" href="../global.css">
+  <link rel="stylesheet" href="../styles/cart-modal.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>Pagamento</title>
 </head>
+
 <body>
 
   <header>
@@ -19,19 +23,108 @@
       </a>
     </div>
     <div class="search-container">
-      <input type="text" placeholder="Procure algo">
+
     </div>
     <div class="car-container">
       <button id="myBtn">
-        <img src="https://pngimg.com/d/shopping_cart_PNG4.png" alt="car">
+        <i class="fa-solid fa-cart-shopping"></i>
+      </button>
+      <button id="user-btn">
+        <i class="fa-solid fa-user"></i>
+        <div id="user-modal">
+          <a href="../Login/index.html">Sair</a>
+        </div>
       </button>
     </div>
   </header>
 
-  <a href="../Dashboard/index.html">Dashboard</a>
-  <a href="../Home/index.html">Home</a>
-  <a href="../Produto/index.html">Produto</a>
-  <a href="../Login/index.html">Sair</a>
+  <!-- Cart Modal -->
+
+  <div id="cart-modal" class="modal">
+
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="cart-container">
+        <section id="cart-itens">
+          <ul id="items-list">
+            
+          </ul>
+        </section>
+        <section id="total-container">
+          <div id="summary-container">
+            <h2 id="summary">Resumo do pedido</h2>
+            <div class="products-total">
+              <p id="products">produto(s)</p>
+              <span id="products-value"></span>
+            </div>
+            <div class="shipping-container">
+              <p id="shipping">frete</p>
+              <span id="shipping-value">R$ <span></span></span>
+            </div>
+          </div>
+          <div class="summary-total">
+            <h3 id="total">Total</h3>
+            <p id="summary-value"></p>
+          </div>
+          <div class="summary-btn-container">
+            <a href="../Pagamento/index.html">
+              <button id="summary-btn">Comprar</button>
+            </a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <main>
+
+    <section id="payment-methods">
+
+      <button class="accordion">Cartão de crédito</button>
+      <div class="panel">
+        <p>cartão de crédito</p>
+      </div>
+      
+      <button class="accordion">Cartão de débito</button>
+      <div class="panel">
+        <p>cartão de débito</p>
+      </div>
+      
+      <button class="accordion">Boleto</button>
+      <div class="panel">
+        <p>boleto</p>
+      </div>
+
+      <button class="accordion">Pix</button>
+      <div class="panel">
+        <p>Pix</p>
+      </div>
+      
+    </section>
+
+    <section id="resume-payment">
+      <h2>Resumo da compra</h2>
+      <div class="shipping">
+        <p>Data de entrega</p>
+        <span>30/09/2023</span>
+      </div>
+      <div class="shipping-code">
+        <p>Código do pedido</p>
+        <span>008239958740</span>
+      </div>
+      <div class="total-container">
+        <p>Total</p>
+        <span>R$ 231,98</span>
+      </div>
+      <button id="payment-btn" onclick="finishPayment()">Finalizar compra</button>
+    </section>
+
+  </main>
+
+  <script src="payment.js"></script>
+  <script src="../scripts/cart.js"></script>
+  <script src="../scripts/user.js"></script>
 
 </body>
+
 </html>

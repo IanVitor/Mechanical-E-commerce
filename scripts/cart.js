@@ -1,5 +1,9 @@
 const $cartList = document.querySelector("#items-list");
 const $itemsValueSum = document.querySelector("#products-value");
+const $shippingValue = document.querySelector("#shipping-value span");
+const $moreBtn = document.querySelector("#qtd-more");
+const $minusBtn = document.querySelector("#qtd-minus");
+const $qtdInput = document.querySelector("#qtd-input");
 
 var cart = [];
 
@@ -14,7 +18,7 @@ function loadCartItems() {
       <div id="item-qtd">
         <button id="qtd-minus">-</button>
         <input id="qtd-input" type="text" value="${e.qtd}">
-        <button id="qtd-more">+</button>
+        <button id="qtd-more" onclick(value++)>+</button>
       </div>
       <p id="item-price">R$ ${e.price}</p>
     </div>
@@ -48,12 +52,15 @@ function getStorageData() {
 function totalValueSum(){
   cart = getStorageData();
   let aux = 0
+  $shippingValue.textContent = "12.60"
 
   cart.map(function (e) {
     aux += parseFloat(e.price.replace(",","."))
   });
 
   $itemsValueSum.textContent = 'R$ ' + aux.toFixed(2)
+
+  document.querySelector("#summary-value").textContent = 'R$ '+ (parseFloat($shippingValue.textContent) + aux).toFixed(2)
 }
 
 window.addEventListener("load", () =>{

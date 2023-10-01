@@ -23,20 +23,56 @@
       </a>
     </div>
     <div class="search-container">
-      <input type="text" placeholder="Procure algo">
+
     </div>
     <div class="car-container">
       <button id="myBtn">
-        <img src="https://pngimg.com/d/shopping_cart_PNG4.png" alt="car">
+        <i class="fa-solid fa-cart-shopping"></i>
+      </button>
+      <button id="user-btn">
+        <i class="fa-solid fa-user"></i>
+        <div id="user-modal">
+          <a href="../Login/index.html">Sair</a>
+        </div>
       </button>
     </div>
   </header>
 
-  <div id="myModal" class="modal">
+  <!-- Cart Modal -->
+
+  <div id="cart-modal" class="modal">
 
     <div class="modal-content">
       <span class="close">&times;</span>
-      <p>Seu carrinho está vazio</p>
+      <div class="cart-container">
+        <section id="cart-itens">
+          <ul id="items-list">
+            
+          </ul>
+        </section>
+        <section id="total-container">
+          <div id="summary-container">
+            <h2 id="summary">Resumo do pedido</h2>
+            <div class="products-total">
+              <p id="products">produto(s)</p>
+              <span id="products-value"></span>
+            </div>
+            <div class="shipping-container">
+              <p id="shipping">frete</p>
+              <span id="shipping-value">R$ <span></span></span>
+            </div>
+          </div>
+          <div class="summary-total">
+            <h3 id="total">Total</h3>
+            <p id="summary-value"></p>
+          </div>
+          <div class="summary-btn-container">
+            <a href="../Pagamento/index.html">
+              <button id="summary-btn">Comprar</button>
+            </a>
+          </div>
+        </section>
+      </div>
     </div>
   </div>
 
@@ -72,6 +108,8 @@
 
   <script src="produto.js"></script>
   <script src="../scripts/modal.js"></script>
+  <script src="../scripts/cart.js"></script>
+  <script src="../scripts/user.js"></script>
 
 </body>
 
