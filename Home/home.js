@@ -69,7 +69,6 @@ var result = document.getElementById('result-container')
 var searchInput = document.getElementById('search-input')
 
 searchInput.addEventListener("keyup", (event) =>{
-  console.log(searchInput.value)
   if(event.target.value == "")
   {
     result.style.display = "none"

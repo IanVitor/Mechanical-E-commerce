@@ -12,12 +12,56 @@
   outline: #eb4b25;
 }
 
+#result-nothing{
+  position: absolute;
+  z-index: -1;
+  padding: 5px 10px;
+}
+
 .result {
   display: none;
   padding: 6px;
-  background-color: #f4f5fa;
+  background-color: #fff;
   border: 1px solid #e5e7f2;
   border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  height: 50px;
+  box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.221);
+}
+
+.result:hover{
+  background-color: #dbdde6;
+}
+
+.result button{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 3px;
+}
+
+.result button img{
+  max-width: 30px;
+  height: 100%;
+  cursor: pointer;
+  object-fit: contain;
+}
+
+.result button h4{
+  display: inline-block;
+  font-size: 12px;
+  width: 100px;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+}
+
+.result button span{
+  font-size: 12PX;
   cursor: pointer;
 }
 
@@ -38,29 +82,29 @@
   box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.411);
 }
 
-input[value="Ó" i]~#result-container #result0,
-input[value="Ól" i]~#result-container #result0,
-input[value="Óle" i]~#result-container #result0,
-input[value="Óleo" i]~#result-container #result0,
-input[value="Óleo " i]~#result-container #result0,
-input[value="Óleo p" i]~#result-container #result0,
-input[value="Óleo pa" i]~#result-container #result0,
-input[value="Óleo par" i]~#result-container #result0,
-input[value="Óleo para" i]~#result-container #result0,
-input[value="Óleo para " i]~#result-container #result0,
-input[value="Óleo para m" i]~#result-container #result0,
-input[value="Óleo para mo" i]~#result-container #result0,
-input[value="Óleo para mot" i]~#result-container #result0,
-input[value="Óleo para moto" i]~#result-container #result0,
-input[value="Óleo para motor" i]~#result-container #result0, 
-input[value="Óleo para motor " i]~#result-container #result0, 
-input[value="Óleo para motor -" i]~#result-container #result0, 
-input[value="Óleo para motor - " i]~#result-container #result0,
-input[value="Óleo para motor - 1" i]~#result-container #result0, 
-input[value="Óleo para motor - 15" i]~#result-container #result0, 
-input[value="Óleo para motor - 15W" i]~#result-container #result0,
-input[value="Óleo para motor - 15W4" i]~#result-container #result0, 
-input[value="Óleo para motor - 15W40" i]~#result-container #result0{ 
+input[value="O" i]~#result-container #result0,
+input[value="Ol" i]~#result-container #result0,
+input[value="Ole" i]~#result-container #result0,
+input[value="Oleo" i]~#result-container #result0,
+input[value="Oleo " i]~#result-container #result0,
+input[value="Oleo p" i]~#result-container #result0,
+input[value="Oleo pa" i]~#result-container #result0,
+input[value="Oleo par" i]~#result-container #result0,
+input[value="Oleo para" i]~#result-container #result0,
+input[value="Oleo para " i]~#result-container #result0,
+input[value="Oleo para m" i]~#result-container #result0,
+input[value="Oleo para mo" i]~#result-container #result0,
+input[value="Oleo para mot" i]~#result-container #result0,
+input[value="Oleo para moto" i]~#result-container #result0,
+input[value="Oleo para motor" i]~#result-container #result0, 
+input[value="Oleo para motor " i]~#result-container #result0, 
+input[value="Oleo para motor -" i]~#result-container #result0, 
+input[value="Oleo para motor - " i]~#result-container #result0,
+input[value="Oleo para motor - 1" i]~#result-container #result0, 
+input[value="Oleo para motor - 15" i]~#result-container #result0, 
+input[value="Oleo para motor - 15W" i]~#result-container #result0,
+input[value="Oleo para motor - 15W4" i]~#result-container #result0, 
+input[value="Oleo para motor - 15W40" i]~#result-container #result0{ 
   display: block;
 }
 
@@ -201,3 +245,316 @@ input[value="Par de pneus 275/65R1" i]~#result-container #result5,
 input[value="Par de pneus 275/65R18" i]~#result-container #result5{ 
   display: block;
 }
+
+input[value="P" i]~#result-container #result6,
+input[value="Pa" i]~#result-container #result6,
+input[value="Pas" i]~#result-container #result6,
+input[value="Past" i]~#result-container #result6,
+input[value="Pasti" i]~#result-container #result6,
+input[value="Pastil" i]~#result-container #result6,
+input[value="Pastilh" i]~#result-container #result6,
+input[value="Pastilha" i]~#result-container #result6,
+input[value="Pastilha " i]~#result-container #result6,
+input[value="Pastilha d" i]~#result-container #result6,
+input[value="Pastilha de" i]~#result-container #result6,
+input[value="Pastilha de " i]~#result-container #result6,
+input[value="Pastilha de f" i]~#result-container #result6,
+input[value="Pastilha de fr" i]~#result-container #result6,
+input[value="Pastilha de fre" i]~#result-container #result6,
+input[value="Pastilha de frei" i]~#result-container #result6,
+input[value="Pastilha de freio" i]~#result-container #result6,
+input[value="Pastilha de freio " i]~#result-container #result6,
+input[value="Pastilha de freio H" i]~#result-container #result6,
+input[value="Pastilha de freio Hr" i]~#result-container #result6,
+input[value="Pastilha de freio Hr-" i]~#result-container #result6,
+input[value="Pastilha de freio Hr-v" i]~#result-container #result6,
+input[value="Pastilha de freio Hr-v " i]~#result-container #result6,
+input[value="Pastilha de freio Hr-v d" i]~#result-container #result6,
+input[value="Pastilha de freio Hr-v di" i]~#result-container #result6,
+input[value="Pastilha de freio Hr-v dia" i]~#result-container #result6,
+input[value="Pastilha de freio Hr-v dian" i]~#result-container #result6,
+input[value="Pastilha de freio Hr-v diant" i]~#result-container #result6,
+input[value="Pastilha de freio Hr-v diante" i]~#result-container #result6,
+input[value="Pastilha de freio Hr-v diantei" i]~#result-container #result6,
+input[value="Pastilha de freio Hr-v dianteir" i]~#result-container #result6,
+input[value="Pastilha de freio Hr-v dianteiro" i]~#result-container #result6{ 
+  display: block;
+}
+
+input[value="R" i]~#result-container #result7,
+input[value="Re" i]~#result-container #result7,
+input[value="Res" i]~#result-container #result7,
+input[value="Rese" i]~#result-container #result7,
+input[value="Reser" i]~#result-container #result7,
+input[value="Reserv" i]~#result-container #result7,
+input[value="Reserva" i]~#result-container #result7,
+input[value="Reservat" i]~#result-container #result7,
+input[value="Reservató" i]~#result-container #result7,
+input[value="Reservatór" i]~#result-container #result7,
+input[value="Reservatóri" i]~#result-container #result7,
+input[value="Reservatório" i]~#result-container #result7,
+input[value="Reservatório " i]~#result-container #result7,
+input[value="Reservatório d" i]~#result-container #result7,
+input[value="Reservatório de" i]~#result-container #result7,
+input[value="Reservatório de " i]~#result-container #result7,
+input[value="Reservatório de f" i]~#result-container #result7,
+input[value="Reservatório de fl" i]~#result-container #result7,
+input[value="Reservatório de flu" i]~#result-container #result7,
+input[value="Reservatório de flui" i]~#result-container #result7,
+input[value="Reservatório de fluid" i]~#result-container #result7,
+input[value="Reservatório de fluido" i]~#result-container #result7,
+input[value="Reservatório de fluido " i]~#result-container #result7,
+input[value="Reservatório de fluido C" i]~#result-container #result7,
+input[value="Reservatório de fluido Co" i]~#result-container #result7,
+input[value="Reservatório de fluido Cor" i]~#result-container #result7,
+input[value="Reservatório de fluido Cors" i]~#result-container #result7,
+input[value="Reservatório de fluido Corsa" i]~#result-container #result7,
+input[value="Reservatório de fluido Corsa " i]~#result-container #result7,
+input[value="Reservatório de fluido Corsa 9" i]~#result-container #result7,
+input[value="Reservatório de fluido Corsa 95" i]~#result-container #result7,
+input[value="Reservatório de fluido Corsa 95/" i]~#result-container #result7,
+input[value="Reservatório de fluido Corsa 95/9" i]~#result-container #result7,
+input[value="Reservatório de fluido Corsa 95/96" i]~#result-container #result7
+{ display: block;}
+
+input[value="T" i]~#result-container #result8,
+input[value="Tu" i]~#result-container #result8,
+input[value="Tur" i]~#result-container #result8,
+input[value="Turb" i]~#result-container #result8,
+input[value="Turbi" i]~#result-container #result8,
+input[value="Turbin" i]~#result-container #result8,
+input[value="Turbina" i]~#result-container #result8,
+input[value="Turbina " i]~#result-container #result8,
+input[value="Turbina A" i]~#result-container #result8,
+input[value="Turbina Au" i]~#result-container #result8,
+input[value="Turbina Aut" i]~#result-container #result8,
+input[value="Turbina Auto" i]~#result-container #result8,
+input[value="Turbina Auto " i]~#result-container #result8,
+input[value="Turbina Auto A" i]~#result-container #result8,
+input[value="Turbina Auto Av" i]~#result-container #result8,
+input[value="Turbina Auto Avi" i]~#result-container #result8,
+input[value="Turbina Auto Avio" i]~#result-container #result8,
+input[value="Turbina Auto Avion" i]~#result-container #result8,
+input[value="Turbina Auto Avioni" i]~#result-container #result8,
+input[value="Turbina Auto Avionic" i]~#result-container #result8,
+input[value="Turbina Auto Avionics" i]~#result-container #result8,
+input[value="Turbina Auto Avionics " i]~#result-container #result8,
+input[value="Turbina Auto Avionics A" i]~#result-container #result8,
+input[value="Turbina Auto Avionics A5" i]~#result-container #result8,
+input[value="Turbina Auto Avionics A50" i]~#result-container #result8,
+input[value="Turbina Auto Avionics A50-" i]~#result-container #result8,
+input[value="Turbina Auto Avionics A50-3" i]~#result-container #result8,
+input[value="Turbina Auto Avionics A50-3P" i]~#result-container #result8
+{ display: block;}
+
+input[value="B" i]~#result-container #result9,
+input[value="Bo" i]~#result-container #result9,
+input[value="Bom" i]~#result-container #result9,
+input[value="Bomb" i]~#result-container #result9,
+input[value="Bomba" i]~#result-container #result9,
+input[value="Bomba " i]~#result-container #result9,
+input[value="Bomba V" i]~#result-container #result9,
+input[value="Bomba Va" i]~#result-container #result9,
+input[value="Bomba Vac" i]~#result-container #result9,
+input[value="Bomba Vacu" i]~#result-container #result9,
+input[value="Bomba Vacuo" i]~#result-container #result9,
+input[value="Bomba Vacuo " i]~#result-container #result9,
+input[value="Bomba Vacuo d" i]~#result-container #result9,
+input[value="Bomba Vacuo do" i]~#result-container #result9,
+input[value="Bomba Vacuo do " i]~#result-container #result9,
+input[value="Bomba Vacuo do m" i]~#result-container #result9,
+input[value="Bomba Vacuo do mo" i]~#result-container #result9,
+input[value="Bomba Vacuo do mot" i]~#result-container #result9,
+input[value="Bomba Vacuo do moto" i]~#result-container #result9,
+input[value="Bomba Vacuo do motor" i]~#result-container #result9,
+input[value="Bomba Vacuo do motor " i]~#result-container #result9,
+input[value="Bomba Vacuo do motor -" i]~#result-container #result9,
+input[value="Bomba Vacuo do motor - " i]~#result-container #result9,
+input[value="Bomba Vacuo do motor - O" i]~#result-container #result9,
+input[value="Bomba Vacuo do motor - On" i]~#result-container #result9,
+input[value="Bomba Vacuo do motor - Oni" i]~#result-container #result9,
+input[value="Bomba Vacuo do motor - Onix" i]~#result-container #result9,
+input[value="Bomba Vacuo do motor - Onix " i]~#result-container #result9,
+input[value="Bomba Vacuo do motor - Onix 2" i]~#result-container #result9,
+input[value="Bomba Vacuo do motor - Onix 20" i]~#result-container #result9,
+input[value="Bomba Vacuo do motor - Onix 202" i]~#result-container #result9,
+input[value="Bomba Vacuo do motor - Onix 2020" i]~#result-container #result9,
+input[value="Bomba Vacuo do motor - Onix 2020/" i]~#result-container #result9,
+input[value="Bomba Vacuo do motor - Onix 2020/2" i]~#result-container #result9,
+input[value="Bomba Vacuo do motor - Onix 2020/20" i]~#result-container #result9,
+input[value="Bomba Vacuo do motor - Onix 2020/202" i]~#result-container #result9,
+input[value="Bomba Vacuo do motor - Onix 2020/2023" i]~#result-container #result9
+{ display: block;}
+
+input[value="F" i]~#result-container #result10,
+input[value="Fl" i]~#result-container #result10,
+input[value="Fla" i]~#result-container #result10,
+input[value="Flan" i]~#result-container #result10,
+input[value="Flang" i]~#result-container #result10,
+input[value="Flange" i]~#result-container #result10,
+input[value="Flange " i]~#result-container #result10,
+input[value="Flange d" i]~#result-container #result10,
+input[value="Flange da" i]~#result-container #result10,
+input[value="Flange da " i]~#result-container #result10,
+input[value="Flange da B" i]~#result-container #result10,
+input[value="Flange da Bo" i]~#result-container #result10,
+input[value="Flange da Bom" i]~#result-container #result10,
+input[value="Flange da Bomb" i]~#result-container #result10,
+input[value="Flange da Bomba" i]~#result-container #result10,
+input[value="Flange da Bomba " i]~#result-container #result10,
+input[value="Flange da Bomba d" i]~#result-container #result10,
+input[value="Flange da Bomba de" i]~#result-container #result10,
+input[value="Flange da Bomba de " i]~#result-container #result10,
+input[value="Flange da Bomba de C" i]~#result-container #result10,
+input[value="Flange da Bomba de Co" i]~#result-container #result10,
+input[value="Flange da Bomba de Com" i]~#result-container #result10,
+input[value="Flange da Bomba de Comb" i]~#result-container #result10,
+input[value="Flange da Bomba de Combu" i]~#result-container #result10,
+input[value="Flange da Bomba de Combus" i]~#result-container #result10,
+input[value="Flange da Bomba de Combust" i]~#result-container #result10,
+input[value="Flange da Bomba de Combustí" i]~#result-container #result10,
+input[value="Flange da Bomba de Combustív" i]~#result-container #result10,
+input[value="Flange da Bomba de Combustíve" i]~#result-container #result10,
+input[value="Flange da Bomba de Combustível" i]~#result-container #result10,
+input[value="Flange da Bomba de Combustível " i]~#result-container #result10,
+input[value="Flange da Bomba de Combustível U" i]~#result-container #result10,
+input[value="Flange da Bomba de Combustível Un" i]~#result-container #result10,
+input[value="Flange da Bomba de Combustível Uno" i]~#result-container #result10,
+input[value="Flange da Bomba de Combustível Uno " i]~#result-container #result10,
+input[value="Flange da Bomba de Combustível Uno M" i]~#result-container #result10,
+input[value="Flange da Bomba de Combustível Uno Mi" i]~#result-container #result10,
+input[value="Flange da Bomba de Combustível Uno Mil" i]~#result-container #result10,
+input[value="Flange da Bomba de Combustível Uno Mile" i]~#result-container #result10,
+input[value="Flange da Bomba de Combustível Uno Mile " i]~#result-container #result10,
+input[value="Flange da Bomba de Combustível Uno Mile 2" i]~#result-container #result10,
+input[value="Flange da Bomba de Combustível Uno Mile 20" i]~#result-container #result10,
+input[value="Flange da Bomba de Combustível Uno Mile 201" i]~#result-container #result10,
+input[value="Flange da Bomba de Combustível Uno Mile 2010" i]~#result-container #result10,
+input[value="Flange da Bomba de Combustível Uno Mile 2010/" i]~#result-container #result10,
+input[value="Flange da Bomba de Combustível Uno Mile 2010/2" i]~#result-container #result10,
+input[value="Flange da Bomba de Combustível Uno Mile 2010/20" i]~#result-container #result10,
+input[value="Flange da Bomba de Combustível Uno Mile 2010/201" i]~#result-container #result10,
+input[value="Flange da Bomba de Combustível Uno Mile 2010/2011" i]~#result-container #result10
+{ display: block;}
+
+input[value="F" i]~#result-container #result11,
+input[value="Fi" i]~#result-container #result11,
+input[value="Fil" i]~#result-container #result11,
+input[value="Filt" i]~#result-container #result11,
+input[value="Filtr" i]~#result-container #result11,
+input[value="Filtro" i]~#result-container #result11,
+input[value="Filtro " i]~#result-container #result11,
+input[value="Filtro d" i]~#result-container #result11,
+input[value="Filtro de" i]~#result-container #result11,
+input[value="Filtro de " i]~#result-container #result11,
+input[value="Filtro de Ó" i]~#result-container #result11,
+input[value="Filtro de Ól" i]~#result-container #result11,
+input[value="Filtro de Óle" i]~#result-container #result11,
+input[value="Filtro de Óleo" i]~#result-container #result11,
+input[value="Filtro de Óleo " i]~#result-container #result11,
+input[value="Filtro de Óleo J" i]~#result-container #result11,
+input[value="Filtro de Óleo Je" i]~#result-container #result11,
+input[value="Filtro de Óleo Jet" i]~#result-container #result11,
+input[value="Filtro de Óleo Jett" i]~#result-container #result11,
+input[value="Filtro de Óleo Jetta" i]~#result-container #result11,
+input[value="Filtro de Óleo Jetta " i]~#result-container #result11,
+input[value="Filtro de Óleo Jetta 2" i]~#result-container #result11,
+input[value="Filtro de Óleo Jetta 2." i]~#result-container #result11,
+input[value="Filtro de Óleo Jetta 2.0" i]~#result-container #result11
+{ display: block;}
+
+input[value="S" i]~#result-container #result12,
+input[value="Su" i]~#result-container #result12,
+input[value="Sup" i]~#result-container #result12,
+input[value="Supo" i]~#result-container #result12,
+input[value="Supor" i]~#result-container #result12,
+input[value="Suport" i]~#result-container #result12,
+input[value="Suporte" i]~#result-container #result12,
+input[value="Suporte " i]~#result-container #result12,
+input[value="Suporte d" i]~#result-container #result12,
+input[value="Suporte de" i]~#result-container #result12,
+input[value="Suporte de " i]~#result-container #result12,
+input[value="Suporte de C" i]~#result-container #result12,
+input[value="Suporte de Ce" i]~#result-container #result12,
+input[value="Suporte de Cel" i]~#result-container #result12,
+input[value="Suporte de Celu" i]~#result-container #result12,
+input[value="Suporte de Celul" i]~#result-container #result12,
+input[value="Suporte de Celula" i]~#result-container #result12,
+input[value="Suporte de Celular" i]~#result-container #result12,
+input[value="Suporte de Celular " i]~#result-container #result12,
+input[value="Suporte de Celular -" i]~#result-container #result12,
+input[value="Suporte de Celular - " i]~#result-container #result12,
+input[value="Suporte de Celular - A" i]~#result-container #result12,
+input[value="Suporte de Celular - Ar" i]~#result-container #result12,
+input[value="Suporte de Celular - Ar " i]~#result-container #result12,
+input[value="Suporte de Celular - Ar C" i]~#result-container #result12,
+input[value="Suporte de Celular - Ar Co" i]~#result-container #result12,
+input[value="Suporte de Celular - Ar Con" i]~#result-container #result12,
+input[value="Suporte de Celular - Ar Cond" i]~#result-container #result12,
+input[value="Suporte de Celular - Ar Condi" i]~#result-container #result12,
+input[value="Suporte de Celular - Ar Condic" i]~#result-container #result12,
+input[value="Suporte de Celular - Ar Condici" i]~#result-container #result12,
+input[value="Suporte de Celular - Ar Condicio" i]~#result-container #result12,
+input[value="Suporte de Celular - Ar Condicion" i]~#result-container #result12,
+input[value="Suporte de Celular - Ar Condiciona" i]~#result-container #result12,
+input[value="Suporte de Celular - Ar Condicionad" i]~#result-container #result12,
+input[value="Suporte de Celular - Ar Condicionado" i]~#result-container #result12
+{ display: block;}
+
+input[value="P" i]~#result-container #result13,
+input[value="Pe" i]~#result-container #result13,
+input[value="Per" i]~#result-container #result13,
+input[value="Perf" i]~#result-container #result13,
+input[value="Perfu" i]~#result-container #result13,
+input[value="Perfum" i]~#result-container #result13,
+input[value="Perfume" i]~#result-container #result13,
+input[value="Perfume " i]~#result-container #result13,
+input[value="Perfume A" i]~#result-container #result13,
+input[value="Perfume Ar" i]~#result-container #result13,
+input[value="Perfume Aro" i]~#result-container #result13,
+input[value="Perfume Arom" i]~#result-container #result13,
+input[value="Perfume Aroma" i]~#result-container #result13,
+input[value="Perfume Aromat" i]~#result-container #result13,
+input[value="Perfume Aromati" i]~#result-container #result13,
+input[value="Perfume Aromatiz" i]~#result-container #result13,
+input[value="Perfume Aromatiza" i]~#result-container #result13,
+input[value="Perfume Aromatizan" i]~#result-container #result13,
+input[value="Perfume Aromatizant" i]~#result-container #result13,
+input[value="Perfume Aromatizante" i]~#result-container #result13,
+input[value="Perfume Aromatizante " i]~#result-container #result13,
+input[value="Perfume Aromatizante P" i]~#result-container #result13,
+input[value="Perfume Aromatizante Pu" i]~#result-container #result13,
+input[value="Perfume Aromatizante Pum" i]~#result-container #result13,
+input[value="Perfume Aromatizante Pump" i]~#result-container #result13,
+input[value="Perfume Aromatizante Pump " i]~#result-container #result13,
+input[value="Perfume Aromatizante Pump -" i]~#result-container #result13,
+input[value="Perfume Aromatizante Pump - " i]~#result-container #result13,
+input[value="Perfume Aromatizante Pump - 3" i]~#result-container #result13,
+input[value="Perfume Aromatizante Pump - 30" i]~#result-container #result13,
+input[value="Perfume Aromatizante Pump - 30m" i]~#result-container #result13,
+input[value="Perfume Aromatizante Pump - 30ml" i]~#result-container #result13
+{ display: block;}
+
+input[value="L" i]~#result-container #result14,
+input[value="Li" i]~#result-container #result14,
+input[value="Lix" i]~#result-container #result14,
+input[value="Lixe" i]~#result-container #result14,
+input[value="Lixei" i]~#result-container #result14,
+input[value="Lixeir" i]~#result-container #result14,
+input[value="Lixeira" i]~#result-container #result14,
+input[value="Lixeira " i]~#result-container #result14,
+input[value="Lixeira d" i]~#result-container #result14,
+input[value="Lixeira de" i]~#result-container #result14,
+input[value="Lixeira de " i]~#result-container #result14,
+input[value="Lixeira de C" i]~#result-container #result14,
+input[value="Lixeira de Ca" i]~#result-container #result14,
+input[value="Lixeira de Car" i]~#result-container #result14,
+input[value="Lixeira de Carr" i]~#result-container #result14,
+input[value="Lixeira de Carro" i]~#result-container #result14,
+input[value="Lixeira de Carro " i]~#result-container #result14,
+input[value="Lixeira de Carro -" i]~#result-container #result14,
+input[value="Lixeira de Carro - " i]~#result-container #result14,
+input[value="Lixeira de Carro - 1" i]~#result-container #result14,
+input[value="Lixeira de Carro - 1L" i]~#result-container #result14
+{ display: block;}
+

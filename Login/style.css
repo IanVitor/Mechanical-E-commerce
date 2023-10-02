@@ -1,124 +1,126 @@
-body{
-  background-color: #cadce4;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+body {
+  background-color: rgba(0,0,0,0.4); 
 }
 
-main{
-  height: 95%;
-  width: 95%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 8px;
-  background-color: #ddebf1;
-  padding: 8px;
-  box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.443);
-}
-
-#logo-container{
-  height: 100%;
-  width: 50%;
-  background-color: #373f48;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 8px;
-}
-
-#login-form{
+.container {
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 16px;
-  width: 50%;
-  height: 100%;
-  border-radius: 8px;
+  width: 100%;
+  margin-top: 100px;
 }
 
-.title-container{
-  font-family: "Montserrat";
-  font-weight: 600;
-  font-size: 20px;
-  padding: 20px;
-}
-
-.input{
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  padding: 12px;
-}
-
-.input input{
-  height: 30px;
-  width: 200px;
-  border: none;
-  padding: 20px 16px;
-  border-radius: 5px;
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.158);
+.card {
   background-color: #fff;
-  outline: none;
+  padding: 30px;
+  border-radius: 4%;
+  box-shadow: 3px 3px 10px #00000060
 }
 
-#login-btn{
+h1{
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000
+}
+
+.label-float input{
+  width: 100%;
+  padding: 5px 5px;
+  display: inline-block;
+  border: 0;
+  border-bottom: 2px solid #000;
+  background-color: transparent;
+  outline: none;
+  min-width: 180px;
+  font-size: 16px;
+  transition: all .3s ease-out;
+  border-radius: 0;
+  
+}
+
+.label-float{
+  position: relative;
+  padding-top: 13px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.label-float input:focus{
+  border-bottom: 2px solid #000;
+}
+
+.label-float label{
+  color: #000;
+  pointer-event: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 13px;
+  transition: all .3s ease-out;
+}
+
+.label-float input:focus + label,
+.label-float input:valid + label{
+  font-size: 13px;
+  margin-top: 0;
+  color: #000
+}
+
+button{
+  background-color: #eb4b25;
+  border: 1px solid #373f48;
+  box-shadow: 2px 3px 8px  rgba(0, 0, 0, 0.329);
+  color: #fff;
+  padding: 8px 16px;
+  font-weight: bold;
+  font-size: 14px;
+  margin-top: 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  outline: none;
+  transition: all .3s ease-in-out;
+}
+
+button:hover{
+  background-color: #df6749;
+  color: #fff;
+}
+
+.justify-center{
   display: flex;
   justify-content: center;
-  padding: 6px;
 }
 
-#login-btn button{
-  background-color: #eb4d25ca;
-  border: none;
-  color: #fff;
-  width: 100%;
-  border-radius: 8px;
-  padding: 16px 16px;
-  cursor: pointer;
-  box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.267);
+p{
+  margin-top: 30px;
+  color: #000;
+  font-size: 14pt;
+  text-align: center;
 }
 
-#login-btn button:hover{
-  transform: scale(1.03);
-}
-
-#redirect-container{
-  padding: 12px;
-  font-size: 14px;
-  font-family: "Montserrat";
-}
-
-#redirect-border{
-  width: 100%;
-  height: 1px;
-  margin: 20px 0 4px;
-  background-color: rgba(0, 0, 0, 0.413);
-}
-
-#redirect-container p{
-  padding: 12px;
-}
-
-#redirect-container p a{
+a{
+  color: #14149c;
+  font-weight: bold;
   text-decoration: none;
-  color: #eb4d25ca;
-  transition: 0.3s;
+  transition: all .3s ease-out;
 }
 
-#redirect-container p a:hover{
-  color: #0000ff;
+a:hover{
+  color: #000;
 }
 
-@media screen and (max-width: 720px) {
-  
-  #login-form{
-    width: 100%;
-  }
+.fa-eye{
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  cursor: pointer;
+  color: #000;
+}
 
-  #logo-container{
-    display: none;
-  }
+ #msgError{
+  text-align: center;
+  color: #ff0000;
+  background-color: #ffbbbb;
+  padding: 10px;
+  border-radius: 4px;
+  display: none;
 }

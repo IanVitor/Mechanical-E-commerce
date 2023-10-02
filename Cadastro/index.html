@@ -1,55 +1,60 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../global.css">
+    <title>Singup</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <h1>Cadastrar</h1>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="../global.css">
-  <title>Cadastre-se</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-</head>
+        <div id="msgError"></div>
+        <div id="msgSuccess"></div>
 
-<body>
-  <main>
-    <section id="logo-container">
-      <img
-        src="https://png.pngtree.com/png-vector/20230815/ourmid/pngtree-sticker-design-made-of-car-parts-clipart-vector-png-image_6908943.png"
-        alt="">
-    </section>
+        <div class="label-float">
+          <input type="text" id="nome" placeholder=" " required />
+          <label id="labelNome" for="nome">Nome</label>
+        </div>
 
-    <form id="signup-form">
-      <div class="title-container">
-        <h1>Cadastre-se</h1>
+        <div class="label-float">
+          <input type="text" id="usuario" placeholder=" " required />
+          <label id="labelUsuario" for="usuario">Usuário</label>
+        </div>
+
+        <div class="label-float">
+          <input type="password" id="senha" placeholder=" " required />
+          <label id="labelSenha" for="senha">Senha</label>
+          <i id="verSenha" class="fa fa-eye" aria-hidden="true"></i>
+        </div>
+
+        <div class="label-float">
+          <input type="password" id="confirmSenha" placeholder=" " required />
+          <label id="labelConfirmSenha" for="confirmSenha"
+            >Confirmar Senha</label
+          >
+          <i id="verConfirmSenha" class="fa fa-eye" aria-hidden="true"></i>
+        </div>
+
+        <div class="justify-center">
+          <button onclick="cadastrar()">Cadastrar</button>
+        </div>
+
+        <p>
+          Já tem uma conta? Faça seu
+          <a href="../Login/index.html">login</a>
+        </p>
       </div>
-      <div class="input-container">
-        <div class="input">
-          <input placeholder="Nome" type="text">
-        </div>
-        <div class="input">
-          <input placeholder="E-mail" type="email">
-        </div>
-        <div class="input">
-          <input placeholder="Endereço" type="text">
-        </div>
-        <div class="input">
-          <input placeholder="Senha" type="password">
-        </div>
-        <div id="signup-btn">
-          <button type="submit">Criar</button>
-        </div>
-      </div>
-      <section id="redirect-container">
-        <div id="redirect-border"></div>
-        <p>Já tem conta, entre <a href="../Login/index.html">agora</a></p>
-      </section>
-    </form>
-  </main>
+    </div>
 
-  <script src="../Cadastro/signup.js"></script>
-
-</body>
-
+    <script src="signup.js"></script>
+  </body>
 </html>
