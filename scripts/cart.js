@@ -133,6 +133,7 @@ function removeItemFromCart(id) {
     }
   }
 
+  loadCartItems()
   localStorage.cartItems = JSON.stringify(cart);
 }
 

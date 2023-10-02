@@ -49,12 +49,15 @@ function getStorageData() {
 }
 
 function finishPayment(){
+  let modal = document.querySelector("#buy-succes")
   cleanLocalStorage()
-  setInterval(() => {
-    window.alert("Muito obrigado pela compra");
-  }, "3000");
 
-  location.href = "../Home/index.html";
+  modal.style.display = "block"
+  setTimeout(() =>{
+    modal.style.display = "none"
+    location.href = "../Home/index.html";
+  }, 3000)
+
 }
 
 window.addEventListener('load', () =>{

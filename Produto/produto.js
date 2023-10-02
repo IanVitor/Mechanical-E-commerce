@@ -120,6 +120,12 @@ buyBtn.addEventListener("click", () => {
   let image = document.getElementById("product-image");
   let name = document.getElementById("product-name");
   let price = document.getElementById("product-price-span");
+  let modal = document.querySelector("#buy-succes")
 
   addToCart(image.src, name.textContent, price.textContent);
+
+  modal.style.display = "block"
+  setTimeout(() =>{
+    modal.style.display = "none"
+  }, 3000)
 });

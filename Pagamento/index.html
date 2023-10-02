@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="../styles/navbar.css">
   <link rel="stylesheet" href="../global.css">
   <link rel="stylesheet" href="../styles/cart-modal.css">
+  <link rel="stylesheet" href="../styles/search.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>Pagamento</title>
 </head>
@@ -37,6 +38,17 @@
       </button>
     </div>
   </header>
+
+  <input type="search" id="search-input" placeholder="Pesquise aqui" value=""
+    oninput="this.setAttribute('value', this.value)">
+
+  <div id="result-container">
+    <p id="result-nothing">Desculpe, não encontramos nada por aqui</p>
+  </div>
+
+  <div id="buy-succes">
+    <p>Compra finalizada com sucesso</p>
+  </div>
 
   <!-- Cart Modal -->
 
@@ -82,22 +94,24 @@
 
       <button class="accordion">Cartão de crédito</button>
       <div class="panel">
-        <p>cartão de crédito</p>
+        <img src="https://static.vecteezy.com/system/resources/previews/022/100/873/original/visa-logo-transparent-free-png.png">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/MasterCard_Logo.svg/2560px-MasterCard_Logo.svg.png">
       </div>
       
       <button class="accordion">Cartão de débito</button>
       <div class="panel">
-        <p>cartão de débito</p>
+        <img src="https://static.vecteezy.com/system/resources/previews/022/100/873/original/visa-logo-transparent-free-png.png">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/MasterCard_Logo.svg/2560px-MasterCard_Logo.svg.png">
       </div>
       
       <button class="accordion">Boleto</button>
       <div class="panel">
-        <p>boleto</p>
+        <img src="https://logodownload.org/wp-content/uploads/2019/09/boleto-logo-0.png">
       </div>
 
       <button class="accordion">Pix</button>
       <div class="panel">
-        <p>Pix</p>
+        <img src="https://files.passeidireto.com/2889edc1-1a70-456a-a32c-e3f050102347/2889edc1-1a70-456a-a32c-e3f050102347.png">
       </div>
       
     </section>
@@ -122,6 +136,7 @@
   </main>
 
   <script src="payment.js"></script>
+  <script src="../scripts/result.js"></script>
   <script src="../scripts/cart.js"></script>
   <script src="../scripts/user.js"></script>
 

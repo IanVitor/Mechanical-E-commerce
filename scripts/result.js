@@ -46,6 +46,23 @@ const createSearchElements = async () => {
   });
 };
 
+var result = document.getElementById('result-container')
+var searchInput = document.getElementById('search-input')
+
+searchInput.addEventListener("keyup", (event) =>{
+  if(event.target.value == "")
+  {
+    result.style.display = "none"
+  }
+  else{
+    result.style.display = "block"
+  }
+})
+
+window.onclick = function(){
+  result.style.display = "none"
+}
+
 async function getData(url) {
   const resposta = await fetch(url);
   const json = await resposta.json();

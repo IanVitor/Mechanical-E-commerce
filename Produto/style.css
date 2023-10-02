@@ -196,6 +196,19 @@ main{
   color: black;
 }
 
+#buy-succes{
+  display: none;
+  background-color: green;
+  color: #fff;
+  width: 100%;
+  padding: 6px;
+  transition: 0.3s all ease-in-out;
+}
+
+#buy-succes h2{
+  font-size: 12px;
+}
+
 @media screen and (max-width: 900px) {
   .wrapper .carousel {
     grid-auto-columns: calc((100% / 3) - 9px);
