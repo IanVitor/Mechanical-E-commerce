@@ -12,10 +12,6 @@ let senha = document.querySelector('#senha')
 let labelSenha = document.querySelector('#labelSenha')
 let validSenha = false
 
-let endereco = document.querySelector('#endereco')
-let labelendereco = document.querySelector('#labelendereco')
-let validendereco = false
-
 let msgError = document.querySelector('#msgError')
 let msgSuccess = document.querySelector('#msgSuccess')
 
@@ -62,7 +58,7 @@ senha.addEventListener('keyup', () => {
 })
 
 function cadastrar(){
-  if(validNome && validEmail && validSenha && validendereco){
+  if(validNome && validEmail && validSenha){
     let listaUser = JSON.parse(localStorage.getItem('listaUser') || '[]')
     
     listaUser.push(
